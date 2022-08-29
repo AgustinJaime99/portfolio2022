@@ -1,0 +1,33 @@
+[
+  {
+    "variation": "default",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {}
+    ],
+    "primary": {
+      "title": [
+        {
+          "type": "heading2",
+          "text": "Glass",
+          "spans": []
+        }
+      ],
+      "second_title": [
+        {
+          "type": "heading2",
+          "text": "Connected",
+          "spans": []
+        }
+      ],
+      "example": [
+        {
+          "type": "heading6",
+          "text": "Afraid",
+          "spans": []
+        }
+      ]
+    },
+    "slice_type": "portfolio_slice"
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "id": "mainhero",
+  "label": "MainHero",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "mainimg": {
+        "type": "Image",
+        "config": {
+          "label": "MainImg",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "portfolio_slice": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    }
+  }
+}
