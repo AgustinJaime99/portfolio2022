@@ -1,0 +1,34 @@
+{
+  "_cts": {
+    "mainhero": {},
+    "work": {}
+  },
+  "slices": {
+    "PortfolioSlice": {
+      "default": {
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          },
+          "second_title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          },
+          "example": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        },
+        "items": {}
+      }
+    },
+    "Home": {}
+  }
+}
