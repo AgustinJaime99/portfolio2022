@@ -1,7 +1,8 @@
 {
   "_cts": {
     "mainhero": {},
-    "work": {}
+    "work": {},
+    "menu": {}
   },
   "slices": {
     "PortfolioSlice": {

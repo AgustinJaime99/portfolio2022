@@ -119,7 +119,17 @@
                   }
                 }
               },
-              "items": {},
+              "items": {
+                "example": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "example",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                }
+              },
               "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
@@ -129,27 +139,35 @@
             "variation": "default",
             "version": "sktwi1xtmkfgx8626",
             "items": [
-              {}
+              {
+                "example": [
+                  {
+                    "type": "paragraph",
+                    "text": "Anim quis enim consectetur consequat sunt aliquip officia ad voluptate nostrud labore fugiat.",
+                    "spans": []
+                  }
+                ]
+              }
             ],
             "primary": {
               "title": [
                 {
                   "type": "heading2",
-                  "text": "Glass",
+                  "text": "Drove",
                   "spans": []
                 }
               ],
               "second_title": [
                 {
                   "type": "heading2",
-                  "text": "Connected",
+                  "text": "Building",
                   "spans": []
                 }
               ],
               "example": [
                 {
                   "type": "heading6",
-                  "text": "Afraid",
+                  "text": "Small",
                   "spans": []
                 }
               ]
@@ -161,7 +179,13 @@
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "C:\\Users\\agust\\Desktop\\Dev\\Portfolio\\portfolio\\.slicemachine\\assets\\slices\\PortfolioSlice\\default\\preview.png",
+            "width": 800,
+            "height": 83
+          }
+        }
       }
     }
   }
