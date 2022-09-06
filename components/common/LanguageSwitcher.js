@@ -6,14 +6,18 @@ const LangIcon = ({ lang }) => {
   return <span className={`fi fi-${code}`} />;
 };
 
-export const LanguageSwitcher = ({ altLangs = [] }) => {
+export const LanguageSwitcher = ({ altLangs = [], localeLang }) => {
   return (
     <ul>
       {altLangs.map((altLang) => {
         return (
           <li key={altLang.lang}>
             <PrismicLink href={linkResolver(altLang)} locale={altLang.lang}>
-              <LangIcon lang={altLang.lang} />
+              {altLang && (
+                <a>
+                  <span>{altLang.lang}</span>
+                </a>
+              )}
             </PrismicLink>
           </li>
         );

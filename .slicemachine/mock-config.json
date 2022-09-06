@@ -2,7 +2,9 @@
   "_cts": {
     "mainhero": {},
     "work": {},
-    "menu": {}
+    "menu": {
+      "menu_links": {}
+    }
   },
   "slices": {
     "PortfolioSlice": {

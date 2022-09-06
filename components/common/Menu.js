@@ -1,20 +1,12 @@
 import { PrismicLink, PrismicText } from '@prismicio/react';
+import LanguageSwitcher from './LanguageSwitcher';
 
-export const Header = ({ menu }) => (
+export const Header = ({ menu, altLangs, localeLang }) => (
   <header>
-    <PrismicLink href='/'>
-      <PrismicText field={menu.data?.title} />
-    </PrismicLink>
-    <nav>
-      <ul>
-        {menu.data?.menu_links.map((menuLink) => (
-          <li key={menuLink.label}>
-            <PrismicLink field={menuLink.link}>
-              <PrismicText field={menuLink.label} />
-            </PrismicLink>
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <PrismicText field={menu.data?.title} />
+
+    <div>
+      <LanguageSwitcher altLangs={altLangs} menu={menu} localeLang={localeLang} />
+    </div>
   </header>
 );

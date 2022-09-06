@@ -15,11 +15,12 @@ const PageContainer = styled.div`
 `;
 
 const Layout = ({ children, altLangs, menu, footer, localeLang }) => {
-  console.log(menu);
   return (
     <PageContainer>
-      <Header altLangs={altLangs} menu={menu} />
-      <AnimatePresence exitBeforeEnter>{children}</AnimatePresence>
+      <Header altLangs={altLangs} menu={menu} localeLang={localeLang} />
+      <AnimatePresence exitBeforeEnter mode='wait'>
+        {children}
+      </AnimatePresence>
       {/* TODO:  <Footer /> */}
     </PageContainer>
   );
