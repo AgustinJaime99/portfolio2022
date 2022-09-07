@@ -24,5 +24,9 @@ module.exports = async () => {
       domains: ['images.prismic.io', 'germanguerci.cdn.prismic.io'],
       formats: ['image/avif', 'image/webp'],
     },
+    experimental: {
+      // Enables the styled-components SWC transform
+      styledComponents: true,
+    },
   };
 };

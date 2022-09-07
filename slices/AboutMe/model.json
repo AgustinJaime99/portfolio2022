@@ -1,15 +1,15 @@
 {
-  "id": "home",
+  "id": "about_me",
   "type": "SharedSlice",
-  "name": "Home",
-  "description": "Home",
+  "name": "AboutMe",
+  "description": "AboutMe",
   "variations": [
     {
       "id": "default",
       "name": "Default",
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
-      "description": "Home",
+      "description": "AboutMe",
       "primary": {
         "title": {
           "type": "StructuredText",
@@ -25,15 +25,6 @@
             "single": "paragraph",
             "label": "Description",
             "placeholder": "A nice description of your feature"
-          }
-        },
-        "button": {
-          "type": "StructuredText",
-          "config": {
-            "label": "Button",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "single": "heading6"
           }
         }
       },

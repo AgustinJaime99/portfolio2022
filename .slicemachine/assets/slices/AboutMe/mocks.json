@@ -1,0 +1,26 @@
+[
+  {
+    "variation": "default",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {}
+    ],
+    "primary": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Written",
+          "spans": []
+        }
+      ],
+      "description": [
+        {
+          "type": "paragraph",
+          "text": "In pariatur minim voluptate commodo incididunt qui. Laboris tempor aliqua laboris do aliqua adipisicing Lorem enim duis proident dolore aliquip ex.",
+          "spans": []
+        }
+      ]
+    },
+    "slice_type": "about_me"
+  }
+]

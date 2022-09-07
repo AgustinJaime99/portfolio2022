@@ -32,6 +32,18 @@
         "items": {}
       }
     },
-    "Home": {}
+    "Home": {
+      "default": {
+        "primary": {
+          "button": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "AboutMe": {}
   }
 }

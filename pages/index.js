@@ -13,7 +13,6 @@ export default function Home({ menu, test, localeLang, doc }) {
         <title>Agus Dev</title>
       </Head>
       <Layout altLangs={test.alternate_languages} menu={menu} localeLang={localeLang}>
-        {/* <HomePage /> */}
         <SliceZone slices={test?.data.slices} components={components} />
       </Layout>
     </>
@@ -32,7 +31,6 @@ export async function getStaticProps({ previewData, locale }) {
     props: {
       menu,
       test,
-
       localeLang,
     },
   };

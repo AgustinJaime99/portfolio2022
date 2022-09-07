@@ -1,23 +1,23 @@
 {
   "slices": {
     "components": {
-      "home": {
+      "about_me": {
         "library": "slices",
-        "id": "home",
-        "name": "Home",
-        "description": "Home",
+        "id": "about_me",
+        "name": "AboutMe",
+        "description": "AboutMe",
         "model": {
-          "id": "home",
+          "id": "about_me",
           "type": "SharedSlice",
-          "name": "Home",
-          "description": "Home",
+          "name": "AboutMe",
+          "description": "AboutMe",
           "variations": [
             {
               "id": "default",
               "name": "Default",
               "docURL": "...",
               "version": "sktwi1xtmkfgx8626",
-              "description": "Home",
+              "description": "AboutMe",
               "primary": {
                 "title": {
                   "type": "StructuredText",
@@ -52,14 +52,102 @@
               "title": [
                 {
                   "type": "heading1",
-                  "text": "Ourselves",
+                  "text": "Written",
                   "spans": []
                 }
               ],
               "description": [
                 {
                   "type": "paragraph",
-                  "text": "Sint do consequat reprehenderit ex duis elit reprehenderit qui. Do in cillum duis. Laboris sit culpa amet magna dolore excepteur veniam dolor voluptate nostrud eu quis.",
+                  "text": "In pariatur minim voluptate commodo incididunt qui. Laboris tempor aliqua laboris do aliqua adipisicing Lorem enim duis proident dolore aliquip ex.",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "about_me"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
+      "home": {
+        "library": "slices",
+        "id": "home",
+        "name": "Home",
+        "description": "Home",
+        "model": {
+          "id": "home",
+          "type": "SharedSlice",
+          "name": "Home",
+          "description": "Home",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Home",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "paragraph",
+                    "label": "Description",
+                    "placeholder": "A nice description of your feature"
+                  }
+                },
+                "button": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Button",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "heading6"
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Knowledge",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Incididunt consectetur eiusmod ex sunt aliqua anim commodo commodo amet. Voluptate labore reprehenderit proident. Laborum adipisicing elit non labore enim ex consectetur velit occaecat esse dolor fugiat exercitation.",
+                  "spans": []
+                }
+              ],
+              "button": [
+                {
+                  "type": "heading6",
+                  "text": "Influence",
                   "spans": []
                 }
               ]
@@ -72,120 +160,6 @@
           "extension": "js"
         },
         "screenshotPaths": {}
-      },
-      "portfolio_slice": {
-        "library": "slices",
-        "id": "portfolio_slice",
-        "name": "PortfolioSlice",
-        "description": "PortfolioSlice",
-        "model": {
-          "id": "portfolio_slice",
-          "type": "SharedSlice",
-          "name": "PortfolioSlice",
-          "description": "PortfolioSlice",
-          "variations": [
-            {
-              "id": "default",
-              "name": "Default",
-              "docURL": "...",
-              "version": "sktwi1xtmkfgx8626",
-              "description": "PortfolioSlice",
-              "primary": {
-                "title": {
-                  "type": "StructuredText",
-                  "config": {
-                    "label": "Titulo",
-                    "placeholder": "This is where it all begins...",
-                    "allowTargetBlank": true,
-                    "single": "heading2"
-                  }
-                },
-                "second_title": {
-                  "type": "StructuredText",
-                  "config": {
-                    "label": "Title",
-                    "placeholder": "",
-                    "allowTargetBlank": true,
-                    "single": "heading2"
-                  }
-                },
-                "example": {
-                  "type": "StructuredText",
-                  "config": {
-                    "label": "example",
-                    "placeholder": "test",
-                    "allowTargetBlank": true,
-                    "single": "heading6"
-                  }
-                }
-              },
-              "items": {
-                "example": {
-                  "type": "StructuredText",
-                  "config": {
-                    "label": "example",
-                    "placeholder": "",
-                    "allowTargetBlank": true,
-                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-                  }
-                }
-              },
-              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
-            }
-          ]
-        },
-        "mocks": {
-          "default": {
-            "variation": "default",
-            "version": "sktwi1xtmkfgx8626",
-            "items": [
-              {
-                "example": [
-                  {
-                    "type": "paragraph",
-                    "text": "Anim quis enim consectetur consequat sunt aliquip officia ad voluptate nostrud labore fugiat.",
-                    "spans": []
-                  }
-                ]
-              }
-            ],
-            "primary": {
-              "title": [
-                {
-                  "type": "heading2",
-                  "text": "Drove",
-                  "spans": []
-                }
-              ],
-              "second_title": [
-                {
-                  "type": "heading2",
-                  "text": "Building",
-                  "spans": []
-                }
-              ],
-              "example": [
-                {
-                  "type": "heading6",
-                  "text": "Small",
-                  "spans": []
-                }
-              ]
-            },
-            "slice_type": "portfolio_slice"
-          }
-        },
-        "meta": {
-          "fileName": "index",
-          "extension": "js"
-        },
-        "screenshotPaths": {
-          "default": {
-            "path": "C:\\Users\\agust\\Desktop\\Dev\\Portfolio\\portfolio\\.slicemachine\\assets\\slices\\PortfolioSlice\\default\\preview.png",
-            "width": 800,
-            "height": 83
-          }
-        }
       }
     }
   }
