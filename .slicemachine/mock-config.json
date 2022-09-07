@@ -1,7 +1,10 @@
 {
   "_cts": {
     "mainhero": {},
-    "work": {}
+    "work": {},
+    "menu": {
+      "menu_links": {}
+    }
   },
   "slices": {
     "PortfolioSlice": {
@@ -29,6 +32,18 @@
         "items": {}
       }
     },
-    "Home": {}
+    "Home": {
+      "default": {
+        "primary": {
+          "button": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "AboutMe": {}
   }
 }

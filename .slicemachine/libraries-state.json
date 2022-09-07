@@ -1,23 +1,23 @@
 {
   "slices": {
     "components": {
-      "home": {
+      "about_me": {
         "library": "slices",
-        "id": "home",
-        "name": "Home",
-        "description": "Home",
+        "id": "about_me",
+        "name": "AboutMe",
+        "description": "AboutMe",
         "model": {
-          "id": "home",
+          "id": "about_me",
           "type": "SharedSlice",
-          "name": "Home",
-          "description": "Home",
+          "name": "AboutMe",
+          "description": "AboutMe",
           "variations": [
             {
               "id": "default",
               "name": "Default",
               "docURL": "...",
               "version": "sktwi1xtmkfgx8626",
-              "description": "Home",
+              "description": "AboutMe",
               "primary": {
                 "title": {
                   "type": "StructuredText",
@@ -52,19 +52,19 @@
               "title": [
                 {
                   "type": "heading1",
-                  "text": "Ourselves",
+                  "text": "Written",
                   "spans": []
                 }
               ],
               "description": [
                 {
                   "type": "paragraph",
-                  "text": "Sint do consequat reprehenderit ex duis elit reprehenderit qui. Do in cillum duis. Laboris sit culpa amet magna dolore excepteur veniam dolor voluptate nostrud eu quis.",
+                  "text": "In pariatur minim voluptate commodo incididunt qui. Laboris tempor aliqua laboris do aliqua adipisicing Lorem enim duis proident dolore aliquip ex.",
                   "spans": []
                 }
               ]
             },
-            "slice_type": "home"
+            "slice_type": "about_me"
           }
         },
         "meta": {
@@ -73,47 +73,45 @@
         },
         "screenshotPaths": {}
       },
-      "portfolio_slice": {
+      "home": {
         "library": "slices",
-        "id": "portfolio_slice",
-        "name": "PortfolioSlice",
-        "description": "PortfolioSlice",
+        "id": "home",
+        "name": "Home",
+        "description": "Home",
         "model": {
-          "id": "portfolio_slice",
+          "id": "home",
           "type": "SharedSlice",
-          "name": "PortfolioSlice",
-          "description": "PortfolioSlice",
+          "name": "Home",
+          "description": "Home",
           "variations": [
             {
               "id": "default",
               "name": "Default",
               "docURL": "...",
               "version": "sktwi1xtmkfgx8626",
-              "description": "PortfolioSlice",
+              "description": "Home",
               "primary": {
                 "title": {
                   "type": "StructuredText",
                   "config": {
-                    "label": "Titulo",
-                    "placeholder": "This is where it all begins...",
-                    "allowTargetBlank": true,
-                    "single": "heading2"
-                  }
-                },
-                "second_title": {
-                  "type": "StructuredText",
-                  "config": {
+                    "single": "heading1",
                     "label": "Title",
-                    "placeholder": "",
-                    "allowTargetBlank": true,
-                    "single": "heading2"
+                    "placeholder": "This is where it all begins..."
                   }
                 },
-                "example": {
+                "description": {
                   "type": "StructuredText",
                   "config": {
-                    "label": "example",
-                    "placeholder": "test",
+                    "single": "paragraph",
+                    "label": "Description",
+                    "placeholder": "A nice description of your feature"
+                  }
+                },
+                "button": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Button",
+                    "placeholder": "",
                     "allowTargetBlank": true,
                     "single": "heading6"
                   }
@@ -134,27 +132,27 @@
             "primary": {
               "title": [
                 {
-                  "type": "heading2",
-                  "text": "Glass",
+                  "type": "heading1",
+                  "text": "Knowledge",
                   "spans": []
                 }
               ],
-              "second_title": [
+              "description": [
                 {
-                  "type": "heading2",
-                  "text": "Connected",
+                  "type": "paragraph",
+                  "text": "Incididunt consectetur eiusmod ex sunt aliqua anim commodo commodo amet. Voluptate labore reprehenderit proident. Laborum adipisicing elit non labore enim ex consectetur velit occaecat esse dolor fugiat exercitation.",
                   "spans": []
                 }
               ],
-              "example": [
+              "button": [
                 {
                   "type": "heading6",
-                  "text": "Afraid",
+                  "text": "Influence",
                   "spans": []
                 }
               ]
             },
-            "slice_type": "portfolio_slice"
+            "slice_type": "home"
           }
         },
         "meta": {
