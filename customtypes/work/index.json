@@ -12,6 +12,9 @@
           "choices": {
             "home": {
               "type": "SharedSlice"
+            },
+            "about_me": {
+              "type": "SharedSlice"
             }
           }
         }

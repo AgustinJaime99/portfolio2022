@@ -21,8 +21,8 @@ module.exports = async () => {
       defaultLocale: locales[0],
     },
     images: {
-      domains: ['images.prismic.io', 'germanguerci.cdn.prismic.io'],
       formats: ['image/avif', 'image/webp'],
+      layoutRaw: true,
     },
     experimental: {
       // Enables the styled-components SWC transform

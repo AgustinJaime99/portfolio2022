@@ -29,7 +29,7 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang='es'>
+      <Html lang='es' className='scroll-smooth' style={{ scrollBehavior: 'smooth' }}>
         <Head>
           <script async defer src='https://static.cdn.prismic.io/prismic.js?new=true&repo=germanguerci'></script>
           <meta name='description' content='Agustin Jaime Front-end developer site' />

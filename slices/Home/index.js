@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { PrismicRichText, PrismicLink } from '@prismicio/react';
+import { PrismicRichText } from '@prismicio/react';
 import Lottie from 'react-lottie';
 import animationData from '../../public/animations/95348-coding-boy.json';
 import { motion } from 'framer-motion';
@@ -22,7 +22,6 @@ const Home = ({ slice }) => {
       },
     },
   };
-  console.log(slice);
   return (
     <Container variants={sectionVariant} initial='hidden' animate='visible'>
       <div className='home'>
@@ -66,7 +65,7 @@ const Container = styled(motion.div)`
 
   .link {
     text-decoration: none;
-    min-width: auto;
+    display: inline-block;
     .button {
       border: 1px solid var(--mainBg);
       max-width: 102px;
@@ -83,19 +82,22 @@ const Container = styled(motion.div)`
       color: var(--mainBg);
       transition: all ease-in 0.2s;
       box-shadow: -5px 5px 0px 2px var(--secondaryColor1);
+      font-weight: 600;
 
       span {
-        color: transparent;
+        color: #ffffff47;
         transition: all ease-in 0.2s;
         z-index: 100;
         text-shadow: -5px 5px 0px transparent;
       }
 
       &:hover {
+        background-color: transparent;
         box-shadow: 0px 0px 0px 0px var(--secondaryColor2);
         border: 1px solid var(--secondaryColor3);
         color: var(--secondaryColor3);
         span {
+          color: transparent;
           text-shadow: 0px 0px 0px var(--secondaryColor3);
         }
       }
@@ -106,6 +108,7 @@ const Container = styled(motion.div)`
     color: var(--mainBg);
     font-size: 6.7rem;
   }
+
   p {
     background: -webkit-linear-gradient(45deg, var(--mainBg), var(--secondaryColor1));
     -webkit-background-clip: text;
@@ -117,7 +120,51 @@ const Container = styled(motion.div)`
     margin: auto;
     display: flex;
     align-items: center;
-    min-width: 1200px;
+    max-width: 1500px;
     justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      text-align: center;
+      font-size: 4.7rem;
+    }
+
+    p {
+      text-align: center;
+      font-size: 4.7rem;
+    }
+
+    .home {
+      padding: 4rem 0;
+      .img {
+        display: none;
+        div {
+          width: 300px !important;
+          height: 500px !important;
+        }
+      }
+    }
+    svg {
+      width: 300px !important;
+      height: 500px !important;
+    }
+  }
+
+  @media (max-width: 1500px) {
+    .home {
+      padding: 10rem 0 0 0;
+      .img {
+        div {
+          width: 400px !important;
+          height: 500px !important;
+        }
+      }
+    }
+    svg {
+      width: 400px !important;
+      height: 500px !important;
+    }
   }
 `;
