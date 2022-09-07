@@ -1,11 +1,9 @@
 import React from 'react';
 import { AnimatePresence } from 'framer-motion';
 import styled from 'styled-components';
-import { GlobalContext } from '../../context/GlobalContext';
-import 'react-toastify/dist/ReactToastify.css';
+import { Header } from './Menu';
 
 const PageContainer = styled.div`
-  background-color: var(--mainBg);
   height: 100%;
   width: 100%;
   position: relative;
@@ -13,13 +11,14 @@ const PageContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: var(--mainBlack);
 `;
 
-const Layout = ({ children }) => {
+const Layout = ({ children, altLangs, menu, footer, localeLang }) => {
   return (
     <PageContainer>
-      {/* TODO: MENU <Navbar /> */}
-      <AnimatePresence exitBeforeEnter>{children}</AnimatePresence>
+      <Header altLangs={altLangs} menu={menu} localeLang={localeLang} />
+      <AnimatePresence mode='wait'>{children}</AnimatePresence>
       {/* TODO:  <Footer /> */}
     </PageContainer>
   );

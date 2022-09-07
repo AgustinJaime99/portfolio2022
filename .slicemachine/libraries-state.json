@@ -1,6 +1,127 @@
 {
   "slices": {
     "components": {
+      "about_me": {
+        "library": "slices",
+        "id": "about_me",
+        "name": "AboutMe",
+        "description": "AboutMe",
+        "model": {
+          "id": "about_me",
+          "type": "SharedSlice",
+          "name": "AboutMe",
+          "description": "AboutMe",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "AboutMe",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                },
+                "item": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Item",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "aboutdescription": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "AboutDescription",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "skills": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Skills",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "skillsdescription": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "SkillsDescription",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Everyone",
+                  "spans": []
+                }
+              ],
+              "item": [
+                {
+                  "type": "paragraph",
+                  "text": "Aute reprehenderit et irure ut est.",
+                  "spans": []
+                }
+              ],
+              "aboutdescription": [
+                {
+                  "type": "paragraph",
+                  "text": "Incididunt consectetur esse cillum nisi incididunt exercitation exercitation labore voluptate occaecat exercitation.",
+                  "spans": []
+                }
+              ],
+              "skills": [
+                {
+                  "type": "paragraph",
+                  "text": "Sit irure tempor pariatur in. Mollit commodo laborum sit aute. Sunt velit voluptate nulla in velit fugiat id consectetur consectetur nostrud est commodo occaecat do eiusmod.",
+                  "spans": []
+                }
+              ],
+              "skillsdescription": [
+                {
+                  "type": "paragraph",
+                  "text": "Ullamco reprehenderit aliqua sint nostrud nisi pariatur commodo in. Reprehenderit cillum irure ad duis est elit in esse nisi Lorem veniam culpa tempor velit amet. Commodo commodo ad culpa consequat quis excepteur dolor.",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "about_me"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
       "home": {
         "library": "slices",
         "id": "home",
@@ -34,86 +155,12 @@
                     "label": "Description",
                     "placeholder": "A nice description of your feature"
                   }
-                }
-              },
-              "items": {},
-              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
-            }
-          ]
-        },
-        "mocks": {
-          "default": {
-            "variation": "default",
-            "version": "sktwi1xtmkfgx8626",
-            "items": [
-              {}
-            ],
-            "primary": {
-              "title": [
-                {
-                  "type": "heading1",
-                  "text": "Ourselves",
-                  "spans": []
-                }
-              ],
-              "description": [
-                {
-                  "type": "paragraph",
-                  "text": "Sint do consequat reprehenderit ex duis elit reprehenderit qui. Do in cillum duis. Laboris sit culpa amet magna dolore excepteur veniam dolor voluptate nostrud eu quis.",
-                  "spans": []
-                }
-              ]
-            },
-            "slice_type": "home"
-          }
-        },
-        "meta": {
-          "fileName": "index",
-          "extension": "js"
-        },
-        "screenshotPaths": {}
-      },
-      "portfolio_slice": {
-        "library": "slices",
-        "id": "portfolio_slice",
-        "name": "PortfolioSlice",
-        "description": "PortfolioSlice",
-        "model": {
-          "id": "portfolio_slice",
-          "type": "SharedSlice",
-          "name": "PortfolioSlice",
-          "description": "PortfolioSlice",
-          "variations": [
-            {
-              "id": "default",
-              "name": "Default",
-              "docURL": "...",
-              "version": "sktwi1xtmkfgx8626",
-              "description": "PortfolioSlice",
-              "primary": {
-                "title": {
-                  "type": "StructuredText",
-                  "config": {
-                    "label": "Titulo",
-                    "placeholder": "This is where it all begins...",
-                    "allowTargetBlank": true,
-                    "single": "heading2"
-                  }
                 },
-                "second_title": {
+                "button": {
                   "type": "StructuredText",
                   "config": {
-                    "label": "Title",
+                    "label": "Button",
                     "placeholder": "",
-                    "allowTargetBlank": true,
-                    "single": "heading2"
-                  }
-                },
-                "example": {
-                  "type": "StructuredText",
-                  "config": {
-                    "label": "example",
-                    "placeholder": "test",
                     "allowTargetBlank": true,
                     "single": "heading6"
                   }
@@ -134,34 +181,40 @@
             "primary": {
               "title": [
                 {
-                  "type": "heading2",
-                  "text": "Glass",
+                  "type": "heading1",
+                  "text": "Knowledge",
                   "spans": []
                 }
               ],
-              "second_title": [
+              "description": [
                 {
-                  "type": "heading2",
-                  "text": "Connected",
+                  "type": "paragraph",
+                  "text": "Incididunt consectetur eiusmod ex sunt aliqua anim commodo commodo amet. Voluptate labore reprehenderit proident. Laborum adipisicing elit non labore enim ex consectetur velit occaecat esse dolor fugiat exercitation.",
                   "spans": []
                 }
               ],
-              "example": [
+              "button": [
                 {
                   "type": "heading6",
-                  "text": "Afraid",
+                  "text": "Influence",
                   "spans": []
                 }
               ]
             },
-            "slice_type": "portfolio_slice"
+            "slice_type": "home"
           }
         },
         "meta": {
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "C:\\Users\\agust\\Desktop\\Dev\\Portfolio\\portfolio\\.slicemachine\\assets\\slices\\Home\\default\\preview.png",
+            "width": 800,
+            "height": 600
+          }
+        }
       }
     }
   }

@@ -26,6 +26,15 @@
             "label": "Description",
             "placeholder": "A nice description of your feature"
           }
+        },
+        "button": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Button",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading6"
+          }
         }
       },
       "items": {},
