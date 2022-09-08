@@ -10,7 +10,7 @@ const global = css`
     --secondaryColor2: #d20f53;
     --secondaryColor3: #f2407e;
     --variant1: #a63c3a;
-    --variant2: #6a2625;
+    --variant2: #ca6a68;
     --variant3: #c55b59;
     --mainBlack: #020202;
   }
