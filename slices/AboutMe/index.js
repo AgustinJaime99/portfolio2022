@@ -58,8 +58,13 @@ const ContainerAbout = styled.div`
   }
 
   .img-container {
+    border-radius: 10px;
     width: 450px;
     box-shadow: -10px 10px 0px #2e93dc;
+
+    img {
+      border-radius: 10px;
+    }
   }
   .link {
     margin-top: 5em;

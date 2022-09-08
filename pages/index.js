@@ -7,7 +7,6 @@ import { components } from '../slices';
 import Layout from '../components/common/Layout';
 
 export default function Home({ menu, test, localeLang, doc }) {
-  console.log(test?.data);
   return (
     <>
       <Head>
