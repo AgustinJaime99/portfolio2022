@@ -18,7 +18,6 @@ import Button from '../../components/common/Button';
 
 const Work = ({ slice }) => {
   const [ref, inView] = useInView();
-  const { contextDataGlobal, setContextDataGlobal } = useContext(GlobalContext);
   const controls = useAnimation();
   const variants = {
     initial: {
@@ -30,48 +29,45 @@ const Work = ({ slice }) => {
       x: 0,
       transition: {
         duration: 1,
-        delay: 1,
+        delay: 0.5,
       },
     },
   };
 
   useEffect(() => {
+    console.log(inView);
     if (inView) {
       controls.start('animate_text');
     }
   }, [controls, inView]);
 
-  useEffect(() => {
-    if (inView) {
-      setContextDataGlobal({ ...contextDataGlobal, backgroundColor: '#020202' });
-    }
-  }, [inView]);
-
   return (
     <Container>
       <Image src={WaveSVG} layout='responsive' alt='wave' />
       <section id='work'>
-        <ContainerAbout>
+        <ContainerAbout ref={ref}>
           <span className='title'>{slice.primary.title && <PrismicRichText field={slice.primary.title} />}</span>
-          <ContainerB21Img ref={ref}>
+          <ContainerB21Img>
             <div className='info'>
-              <motion.span animate='animate_text' className='company-title' style={{ display: 'inline-block' }} variants={variants} initial='initial'>
+              <motion.span animate={controls} className='company-title' style={{ display: 'inline-block' }} variants={variants} initial='initial'>
                 {slice.primary.title_company2 && <PrismicRichText field={slice.primary.title_company2} />}
               </motion.span>
-              <motion.span variants={variants} initial='initial' animate='animate_text' className='description-company1'>
+              <motion.span variants={variants} initial='initial' animate={controls} className='description-company1'>
                 {slice.primary.description_company2 && <PrismicRichText field={slice.primary.description_company2} />}
               </motion.span>
               {slice.primary.link_company2 && (
-                <Button
-                  href={'https://www.b21.com/'}
-                  margin='6em 0 0 0'
-                  shadowColor={'#a63c3a'}
-                  colorText={'#e1e2dc'}
-                  secondaryColor='#a63c3a'
-                  primaryColor={'#ca6a68'}
-                >
-                  <PrismicRichText field={slice.primary.link_company2} />
-                </Button>
+                <motion.span variants={variants} initial='initial' animate={controls}>
+                  <Button
+                    href={'https://www.b21.com/'}
+                    margin='6em 0 0 0'
+                    shadowColor={'#a63c3a'}
+                    colorText={'#e1e2dc'}
+                    secondaryColor='#a63c3a'
+                    primaryColor={'#ca6a68'}
+                  >
+                    <PrismicRichText field={slice.primary.link_company2} />
+                  </Button>
+                </motion.span>
               )}
             </div>
             <ImageFade
@@ -125,23 +121,25 @@ const Work = ({ slice }) => {
               botEm='11em'
             />
             <div className='info'>
-              <motion.span className='company-title' animate='animate_text' style={{ display: 'inline-block' }} variants={variants} initial='initial'>
+              <motion.span className='company-title' animate={controls} style={{ display: 'inline-block' }} variants={variants} initial='initial'>
                 {slice.primary.title_company1 && <PrismicRichText field={slice.primary.title_company1} />}
               </motion.span>
-              <motion.span variants={variants} initial='initial' animate='animate_text' className='description-company1'>
+              <motion.span variants={variants} initial='initial' animate={controls} className='description-company1'>
                 {slice.primary.description_company1 && <PrismicRichText field={slice.primary.description_company1} />}
               </motion.span>
               {slice.primary.link_company1 && (
-                <Button
-                  href={'https://www.campuspulsar.gob.ar/'}
-                  margin='6em 0 0 0'
-                  shadowColor={'#a63c3a'}
-                  colorText={'#e1e2dc'}
-                  secondaryColor='#a63c3a'
-                  primaryColor={'#ca6a68'}
-                >
-                  <PrismicRichText field={slice.primary.link_company1} />
-                </Button>
+                <motion.span variants={variants} initial='initial' animate={controls}>
+                  <Button
+                    href={'https://www.campuspulsar.gob.ar/'}
+                    margin='6em 0 0 0'
+                    shadowColor={'#a63c3a'}
+                    colorText={'#e1e2dc'}
+                    secondaryColor='#a63c3a'
+                    primaryColor={'#ca6a68'}
+                  >
+                    <PrismicRichText field={slice.primary.link_company1} />
+                  </Button>
+                </motion.span>
               )}
             </div>
           </ContainerB21Img>
