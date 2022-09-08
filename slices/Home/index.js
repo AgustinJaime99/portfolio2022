@@ -50,6 +50,7 @@ export default Home;
 const Container = styled(motion.div)`
   background-color: var(--mainBlack);
   display: flex;
+
   min-height: 100%;
   width: 100%;
   height: 100vh;
@@ -66,6 +67,7 @@ const Container = styled(motion.div)`
   .link {
     text-decoration: none;
     display: inline-block;
+
     .button {
       border: 1px solid var(--mainBg);
       max-width: 102px;

@@ -2,13 +2,16 @@
 
 import AboutMe from './AboutMe';
 import Home from './Home';
+import Work from './Work';
 
 export {
 	AboutMe,
 	Home,
+	Work,
 };
 
 export const components = {
 	about_me: AboutMe,
 	home: Home,
+	work: Work,
 };

@@ -1,15 +1,15 @@
 {
-  "id": "about_me",
+  "id": "work",
   "type": "SharedSlice",
-  "name": "AboutMe",
-  "description": "AboutMe",
+  "name": "Work",
+  "description": "Work",
   "variations": [
     {
       "id": "default",
       "name": "Default",
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
-      "description": "AboutMe",
+      "description": "Work",
       "primary": {
         "title": {
           "type": "StructuredText",
@@ -19,46 +19,55 @@
             "placeholder": "This is where it all begins..."
           }
         },
-        "item": {
+        "title_company1": {
           "type": "StructuredText",
           "config": {
-            "label": "Item",
+            "label": "title_company1",
             "placeholder": "",
             "allowTargetBlank": true,
             "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         },
-        "aboutdescription": {
+        "description_company1": {
           "type": "StructuredText",
           "config": {
-            "label": "AboutDescription",
+            "label": "description_company1",
             "placeholder": "",
             "allowTargetBlank": true,
             "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         },
-        "skills": {
+        "link_company1": {
           "type": "StructuredText",
           "config": {
-            "label": "Skills",
+            "label": "link_company1",
             "placeholder": "",
             "allowTargetBlank": true,
             "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         },
-        "skillsdescription": {
+        "title_company2": {
           "type": "StructuredText",
           "config": {
-            "label": "SkillsDescription",
+            "label": "title_company2",
             "placeholder": "",
             "allowTargetBlank": true,
             "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         },
-        "button": {
+        "description_company2": {
           "type": "StructuredText",
           "config": {
-            "label": "Button",
+            "label": "description_company2",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "link_company2": {
+          "type": "StructuredText",
+          "config": {
+            "label": "link_company2",
             "placeholder": "",
             "allowTargetBlank": true,
             "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
