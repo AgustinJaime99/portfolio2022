@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { PrismicRichText } from '@prismicio/react';
+import { RichText, PrismicRichText } from '@prismicio/react';
 import Image from 'next/image';
 import WaveSVG from '../../public/waveblue.svg';
 import Me from '../../public/me.jpeg';
@@ -22,6 +22,11 @@ const AboutMe = ({ slice }) => {
               <Image src={Me} layout='responsive' alt='Agustin Diego Jaime' />
             </div>
           </InfoSection>
+          <a href='https://drive.google.com/file/d/1d67Fcnu_fGYWfW2Zy49xLWYdQUWUWilR/view' className='link' target='blank'>
+            <button className='button'>
+              <span>{slice.primary.button && <PrismicRichText field={slice?.primary?.button} />}</span>
+            </button>
+          </a>
         </ContainerAbout>
       </section>
     </Container>
@@ -44,14 +49,58 @@ const ContainerAbout = styled.div`
   margin: auto;
   max-width: 1200px;
   display: flex;
+  align-items: center;
   flex-direction: column;
 
   .title {
     text-align: center;
+    text-shadow: -4px 4px 0px #2e93dc;
   }
 
   .img-container {
     width: 450px;
+    box-shadow: -10px 10px 0px #2e93dc;
+  }
+  .link {
+    margin-top: 5em;
+    text-decoration: none;
+    display: inline-block;
+    .button {
+      border: 1px solid var(--mainBg);
+      max-width: 180px;
+      display: flex;
+      height: 42px;
+      background-color: transparent;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      border-radius: 6px;
+      width: 180px;
+      text-align: center;
+      align-self: center;
+      color: var(--mainBg);
+      transition: all ease-in 0.2s;
+      box-shadow: -5px 5px 0px 2px var(--primaryColor2);
+      font-weight: 600;
+
+      span {
+        color: #ffffff47;
+        transition: all ease-in 0.2s;
+        z-index: 100;
+        text-shadow: -5px 5px 0px transparent;
+      }
+
+      &:hover {
+        background-color: transparent;
+        box-shadow: 0px 0px 0px 0px var(--variant3);
+        border: 1px solid var(--primaryColor3);
+        color: var(--primaryColor3);
+        span {
+          color: transparent;
+          text-shadow: 0px 0px 0px var(--primaryColor3);
+        }
+      }
+    }
   }
 `;
 
