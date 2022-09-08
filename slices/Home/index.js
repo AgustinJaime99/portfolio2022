@@ -22,13 +22,32 @@ const Home = ({ slice }) => {
       },
     },
   };
+
+  const spanVariant = {
+    initial: {
+      x: '-20vw',
+      opacity: 0,
+    },
+    visible: {
+      x: 0,
+      opacity: 1,
+    },
+    transition: {
+      type: 'spring',
+      stiffness: 10,
+      damping: 300,
+    },
+  };
+
   return (
     <Container variants={sectionVariant} initial='hidden' animate='visible'>
       <div className='home'>
         <div>
           <div className='text-main'>
-            <span className='title'>{slice.primary.title && <PrismicRichText field={slice.primary.title} />}</span>
-            <span> {slice.primary.description && <PrismicRichText field={slice.primary.description} />}</span>
+            <motion.span className='title' variants={spanVariant}>
+              {slice.primary.title && <PrismicRichText field={slice.primary.title} />}
+            </motion.span>
+            <motion.span variants={spanVariant}> {slice.primary.description && <PrismicRichText field={slice.primary.description} />}</motion.span>
           </div>
           <a href='#about' className='link'>
             <button className='button'>

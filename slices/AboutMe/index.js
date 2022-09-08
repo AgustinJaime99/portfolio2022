@@ -1,13 +1,28 @@
 import styled from 'styled-components';
-import { RichText, PrismicRichText } from '@prismicio/react';
+import { PrismicRichText } from '@prismicio/react';
+import { useEffect, useContext } from 'react';
+import { useInView } from 'react-intersection-observer';
 import Image from 'next/image';
+
 import WaveSVG from '../../public/waveblue.svg';
 import Me from '../../public/me.jpeg';
+import { GlobalContext } from '../../context/GlobalContext';
 
 const AboutMe = ({ slice }) => {
+  const [ref, inView] = useInView();
+  const { contextDataGlobal, setContextDataGlobal } = useContext(GlobalContext);
+
+  useEffect(() => {
+    if (inView) {
+      setContextDataGlobal({ ...contextDataGlobal, backgroundColor: '#020202' });
+    }
+  }, [inView]);
+
   return (
     <Container>
-      <Image src={WaveSVG} layout='responsive' alt='wave' />
+      <div ref={ref}>
+        <Image src={WaveSVG} layout='responsive' alt='wave' />
+      </div>
       <section id='about'>
         <ContainerAbout>
           <span className='title'>{slice.primary.title && <PrismicRichText field={slice.primary.title} />}</span>
@@ -41,7 +56,7 @@ const Container = styled.div`
     width: 100%;
     background-color: var(--primaryColor1);
     color: var(--mainBg);
-    padding: 0 0 10em 0;
+    padding: 0 0 2em 0;
   }
 `;
 
