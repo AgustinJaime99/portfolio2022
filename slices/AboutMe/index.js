@@ -75,8 +75,9 @@ const ContainerAbout = styled.div`
   .img-container {
     border-radius: 10px;
     width: 450px;
-    box-shadow: -10px 10px 0px #2e93dc;
-
+    span {
+      box-shadow: -10px 10px 0px #2e93dc;
+    }
     img {
       border-radius: 10px;
     }
@@ -133,13 +134,14 @@ const InfoSection = styled.div`
     padding: 0 25rem 0 0;
 
     h4 {
-      font-size: 3.5rem;
-      margin-bottom: 1em;
+      font-size: 4.5rem;
+      margin-bottom: 0.5em;
       text-shadow: -4px 4px 0px #2e93dc;
+      font-weight: 600;
     }
     p {
-      font-size: 1.8rem;
-      margin-bottom: 1.5em;
+      font-size: 2.2rem;
+      margin-bottom: 1em;
     }
   }
 `;
