@@ -43,12 +43,12 @@ const Work = ({ slice }) => {
 
   useEffect(() => {
     if (inView) {
-      setContextDataGlobal({ ...contextDataGlobal, backgroundColor: '#020202' });
+      setContextDataGlobal({ ...contextDataGlobal, backgroundColor: '#e1e2dc' });
     }
   }, [inView]);
 
   return (
-    <Container>
+    <Container ref={ref}>
       <Image src={WaveSVG} layout='responsive' alt='wave' />
       <section id='work'>
         <ContainerAbout>
@@ -65,10 +65,13 @@ const Work = ({ slice }) => {
                 <Button
                   href={'https://www.b21.com/'}
                   margin='6em 0 0 0'
-                  shadowColor={'#a63c3a'}
-                  colorText={'#e1e2dc'}
-                  secondaryColor='#a63c3a'
-                  primaryColor={'#ca6a68'}
+                  shadowColor={'#0d324d'}
+                  colorText={'#0d324d'}
+                  secondaryColor='#e1e2dc'
+                  primaryColor={'#62aee4'}
+                  backgroundHover={'#62aee4'}
+                  width='150px'
+                  height='52px'
                 >
                   <PrismicRichText field={slice.primary.link_company2} />
                 </Button>
@@ -135,10 +138,13 @@ const Work = ({ slice }) => {
                 <Button
                   href={'https://www.campuspulsar.gob.ar/'}
                   margin='6em 0 0 0'
-                  shadowColor={'#a63c3a'}
-                  colorText={'#e1e2dc'}
-                  secondaryColor='#a63c3a'
-                  primaryColor={'#ca6a68'}
+                  shadowColor={'#0d324d'}
+                  colorText={'#0d324d'}
+                  secondaryColor='#e1e2dc'
+                  primaryColor={'#62aee4'}
+                  backgroundHover={'#62aee4'}
+                  width='150px'
+                  height='52px'
                 >
                   <PrismicRichText field={slice.primary.link_company1} />
                 </Button>
@@ -157,8 +163,8 @@ const Container = styled.div`
   section {
     scroll-behavior: smooth;
     width: 100%;
-    background-color: var(--mainBlack);
-    color: var(--mainBg);
+    background-color: var(--mainBg);
+    color: var(--mainBlack);
     padding: 0 5em 10em;
   }
 `;
@@ -176,21 +182,21 @@ const ContainerB21Img = styled.div`
 
     .company-title {
       font-weight: 600;
-      text-shadow: -4px 4px 0px var(--variant3);
+      text-shadow: -4px 4px 0px var(--primaryColor2);
       h3 {
         font-size: 8rem;
       }
     }
     strong {
       font-weight: 600;
-      text-shadow: -2.5px 2.5px 0.5px var(--variant3);
+      text-shadow: -2.5px 2.5px 0.5px var(--primaryColor3);
     }
 
     h5 {
-      text-shadow: -2.5px 2.5px 0px var(--variant2);
+      text-shadow: -2.5px 2.5px 0px var(--primaryColor3);
       font-size: 2.8rem;
       max-width: 500px;
-      color: var(--mainBg);
+      color: var(--mainBlack);
       font-weight: 600;
     }
   }
@@ -205,7 +211,10 @@ const ContainerAbout = styled.div`
 
   .title {
     text-align: center;
-    text-shadow: -4px 4px 0px var(--variant3);
+    text-shadow: -2.5px 2.5px 0px var(--primaryColor2);
+    h1 {
+      font-size: 6.5rem;
+    }
   }
 
   .img-container {
