@@ -17,12 +17,17 @@ import PcPulsar from '../../public/Pulsar-pc.png';
 import Button from '../../components/common/Button';
 
 const Work = ({ slice }) => {
+  const { contextDataGlobal, setContextDataGlobal } = useContext(GlobalContext);
   const [ref, inView] = useInView();
   const controls = useAnimation();
   const variants = {
     initial: {
       opacity: 0,
       x: -50,
+    },
+    title: {
+      opacity: 0,
+      y: 50,
     },
     animate_text: {
       opacity: 1,
@@ -32,12 +37,20 @@ const Work = ({ slice }) => {
         delay: 0.5,
       },
     },
+    animate_title: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1,
+        delay: 0.5,
+      },
+    },
   };
 
   useEffect(() => {
-    console.log(inView);
     if (inView) {
       controls.start('animate_text');
+      controls.start('animate_title');
     }
   }, [controls, inView]);
 
@@ -51,8 +64,10 @@ const Work = ({ slice }) => {
     <Container ref={ref}>
       <Image src={WaveSVG} layout='responsive' alt='wave' />
       <section id='work'>
-        <ContainerAbout ref={ref}>
-          <span className='title'>{slice.primary.title && <PrismicRichText field={slice.primary.title} />}</span>
+        <ContainerAbout>
+          <motion.span variants={variants} initial='title' animate={controls} className='title'>
+            {slice.primary.title && <PrismicRichText field={slice.primary.title} />}
+          </motion.span>
           <ContainerB21Img>
             <div className='info'>
               <motion.span animate={controls} className='company-title' style={{ display: 'inline-block' }} variants={variants} initial='initial'>
@@ -176,6 +191,7 @@ const ContainerB21Img = styled.div`
   height: 450px;
   width: 1200px;
   max-width: 1200px;
+
   .info {
     position: absolute;
     z-index: 40;
@@ -198,6 +214,21 @@ const ContainerB21Img = styled.div`
       max-width: 500px;
       color: var(--mainBlack);
       font-weight: 600;
+    }
+  }
+
+  @media (max-width: 768px) {
+    max-width: 300px;
+    .info {
+      .company-title {
+        h3 {
+          font-size: 4rem;
+        }
+        h5 {
+          font-size: 1.8rem;
+          max-width: 200px;
+        }
+      }
     }
   }
 `;

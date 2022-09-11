@@ -144,4 +144,8 @@ const InfoSection = styled.div`
       margin-bottom: 1em;
     }
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+  }
 `;
