@@ -7,6 +7,7 @@ import Image from 'next/image';
 import WaveSVG from '../../public/waveblue.svg';
 import Me from '../../public/me.jpeg';
 import { GlobalContext } from '../../context/GlobalContext';
+import Skills from '../../components/public/Skills';
 
 const AboutMe = ({ slice }) => {
   const [ref, inView] = useInView();
@@ -29,25 +30,39 @@ const AboutMe = ({ slice }) => {
           <InfoSection>
             <div className='text'>
               <div>{slice.primary.item && <PrismicRichText field={slice.primary.item} />}</div>
-              <div>{slice.primary.aboutdescription && <PrismicRichText field={slice.primary.aboutdescription} />}</div>
-              <div>{slice.primary.skills && <PrismicRichText field={slice.primary.skills} />}</div>
-              <div>{slice.primary.skillsdescription && <PrismicRichText field={slice.primary.skillsdescription} />}</div>
+              <div className='description'>{slice.primary.aboutdescription && <PrismicRichText field={slice.primary.aboutdescription} />}</div>
+              <a href='https://drive.google.com/file/d/1d67Fcnu_fGYWfW2Zy49xLWYdQUWUWilR/view' className='link' target='blank'>
+                <button className='button'>
+                  <span>{slice.primary.button && <PrismicRichText field={slice?.primary?.button} />}</span>
+                </button>
+              </a>
             </div>
             <div className='img-container'>
               <Image src={Me} layout='responsive' alt='Agustin Diego Jaime' />
             </div>
           </InfoSection>
-          <a href='https://drive.google.com/file/d/1d67Fcnu_fGYWfW2Zy49xLWYdQUWUWilR/view' className='link' target='blank'>
-            <button className='button'>
-              <span>{slice.primary.button && <PrismicRichText field={slice?.primary?.button} />}</span>
-            </button>
-          </a>
+          <SkillSection>
+            {slice.primary.skills && <PrismicRichText field={slice.primary.skills} />}
+            <Skills text={slice.primary} />
+          </SkillSection>
         </ContainerAbout>
       </section>
     </Container>
   );
 };
 export default AboutMe;
+
+const SkillSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  h4 {
+    text-align: center;
+    font-size: 4.5rem;
+    margin: 1.5em 0 1.5em;
+    text-shadow: -4px 4px 0px #2e93dc;
+    font-weight: 600;
+  }
+`;
 
 const Container = styled.div`
   width: 100%;
@@ -76,6 +91,7 @@ const ContainerAbout = styled.div`
     border-radius: 10px;
     width: 450px;
     span {
+      border-radius: 12px;
       box-shadow: -10px 10px 0px #2e93dc;
     }
     img {
@@ -83,7 +99,7 @@ const ContainerAbout = styled.div`
     }
   }
   .link {
-    margin-top: 5em;
+    margin-top: 2.5em;
     text-decoration: none;
     display: inline-block;
     .button {
@@ -112,12 +128,12 @@ const ContainerAbout = styled.div`
       }
 
       &:hover {
-        background-color: transparent;
-        box-shadow: 0px 0px 0px 0px var(--variant3);
+        background-color: var(--primaryColor3);
+        box-shadow: 0px 0px 0px 0px var(--primaryColor2);
         border: 1px solid var(--primaryColor3);
-        color: var(--primaryColor3);
+        color: var(--mainBg);
         span {
-          color: transparent;
+          color: var(--mainBg);
           text-shadow: 0px 0px 0px var(--primaryColor3);
         }
       }
@@ -139,9 +155,11 @@ const InfoSection = styled.div`
       text-shadow: -4px 4px 0px #2e93dc;
       font-weight: 600;
     }
-    p {
-      font-size: 2.2rem;
-      margin-bottom: 1em;
+    .description {
+      p {
+        font-size: 2.2rem;
+        margin-bottom: 1em;
+      }
     }
   }
 

@@ -71,6 +71,78 @@
                     "allowTargetBlank": true,
                     "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
                   }
+                },
+                "jstext": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "jstext",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "reacttext": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "reacttext",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "nexttext": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "nexttext",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "graphqltext": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "graphqltext",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "styledtext": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "styledtext",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "htmltext": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "htmltext",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "csstext": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "csstext",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "reduxtext": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "reduxtext",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
                 }
               },
               "items": {},
@@ -89,42 +161,98 @@
               "title": [
                 {
                   "type": "heading1",
-                  "text": "Musical",
+                  "text": "Rocky",
                   "spans": []
                 }
               ],
               "item": [
                 {
                   "type": "paragraph",
-                  "text": "Sint aute officia excepteur nostrud fugiat sit magna.",
+                  "text": "Non do pariatur amet reprehenderit voluptate.",
                   "spans": []
                 }
               ],
               "aboutdescription": [
                 {
                   "type": "paragraph",
-                  "text": "Sint irure nisi est ad fugiat adipisicing ex sint ullamco. Veniam sint laborum minim eu exercitation.",
+                  "text": "Consectetur eu anim consequat laborum laboris consequat amet. Occaecat sint nisi ut veniam incididunt.",
                   "spans": []
                 }
               ],
               "skills": [
                 {
                   "type": "paragraph",
-                  "text": "Sunt occaecat in id ea est qui eiusmod ea. Ex laboris exercitation elit nisi est nostrud cupidatat officia nisi amet quis est fugiat. In anim est sunt sint.",
+                  "text": "Magna velit consectetur aliquip elit id ut eiusmod dolor.",
                   "spans": []
                 }
               ],
               "skillsdescription": [
                 {
                   "type": "paragraph",
-                  "text": "Deserunt cillum dolor cupidatat sint elit ullamco mollit amet ea exercitation do dolor exercitation dolor.",
+                  "text": "Deserunt elit exercitation labore minim nulla et veniam consectetur aute excepteur. Proident ad occaecat labore dolore ea tempor ut consectetur dolore adipisicing ea aliqua minim sint voluptate.",
                   "spans": []
                 }
               ],
               "button": [
                 {
                   "type": "paragraph",
-                  "text": "Ut enim non qui commodo officia proident. Commodo mollit ullamco enim ex laboris minim amet ea reprehenderit ullamco duis dolor do laboris. Laboris mollit sunt exercitation aliquip amet est duis eiusmod laboris officia.",
+                  "text": "Excepteur dolore exercitation esse excepteur in fugiat eiusmod sit do ullamco ullamco consequat magna officia.",
+                  "spans": []
+                }
+              ],
+              "jstext": [
+                {
+                  "type": "paragraph",
+                  "text": "Sit incididunt cillum exercitation deserunt officia dolor dolor consequat ipsum cillum sunt labore in quis.",
+                  "spans": []
+                }
+              ],
+              "reacttext": [
+                {
+                  "type": "paragraph",
+                  "text": "Adipisicing Lorem culpa veniam sit adipisicing officia nostrud. Duis tempor do exercitation ullamco nostrud qui culpa nisi duis voluptate culpa enim nisi dolor cillum. Pariatur cillum excepteur mollit ex consequat laboris adipisicing ea nisi ut Lorem voluptate voluptate enim.",
+                  "spans": []
+                }
+              ],
+              "nexttext": [
+                {
+                  "type": "paragraph",
+                  "text": "In qui labore cillum eu nostrud ea aliquip occaecat proident.",
+                  "spans": []
+                }
+              ],
+              "graphqltext": [
+                {
+                  "type": "paragraph",
+                  "text": "Deserunt exercitation ut nulla amet do exercitation. Occaecat dolor laboris veniam duis sint commodo aliquip aliqua ea voluptate dolor nostrud ullamco enim enim. Culpa magna in est in veniam ad.",
+                  "spans": []
+                }
+              ],
+              "styledtext": [
+                {
+                  "type": "paragraph",
+                  "text": "Duis id excepteur ipsum laborum elit fugiat culpa eu deserunt non ad ut velit id sint. Anim ex fugiat commodo laborum proident excepteur ex sunt ipsum culpa labore reprehenderit. Veniam deserunt proident culpa nulla consectetur ullamco est amet.",
+                  "spans": []
+                }
+              ],
+              "htmltext": [
+                {
+                  "type": "paragraph",
+                  "text": "Quis Lorem cupidatat labore duis.",
+                  "spans": []
+                }
+              ],
+              "csstext": [
+                {
+                  "type": "paragraph",
+                  "text": "Eiusmod occaecat deserunt tempor anim quis ad non.",
+                  "spans": []
+                }
+              ],
+              "reduxtext": [
+                {
+                  "type": "paragraph",
+                  "text": "Ad mollit laboris minim pariatur occaecat tempor ex pariatur id pariatur reprehenderit. Officia magna dolore cillum dolore aliquip aute mollit voluptate est incididunt.",
                   "spans": []
                 }
               ]
