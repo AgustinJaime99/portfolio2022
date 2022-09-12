@@ -92,7 +92,7 @@ const Work = ({ slice }) => {
                 </Button>
               )}
             </div>
-            <ImageFade
+            {/* <ImageFade
               src={PhoneB21}
               minWidth='70%'
               minHeight='70%'
@@ -127,10 +127,10 @@ const Work = ({ slice }) => {
               leftEm='0em'
               botEm='6em'
               delay={0.7}
-            />
+            /> */}
           </ContainerB21Img>
           <ContainerB21Img>
-            <ImageFade
+            {/* <ImageFade
               src={PhonePulsar}
               minWidth='100%'
               minHeight='100%'
@@ -141,7 +141,7 @@ const Work = ({ slice }) => {
               zIndex={30}
               leftEm='3em'
               botEm='11em'
-            />
+            /> */}
             <div className='info'>
               <motion.span className='company-title' animate={controls} style={{ display: 'inline-block' }} variants={variants} initial='initial'>
                 {slice.primary.title_company1 && <PrismicRichText field={slice.primary.title_company1} />}
@@ -186,16 +186,11 @@ const Container = styled.div`
 
 const ContainerB21Img = styled.div`
   margin: 6em 0 3em 0;
-  position: relative;
   padding: 1rem;
   height: 450px;
-  width: 1200px;
   max-width: 1200px;
 
   .info {
-    position: absolute;
-    z-index: 40;
-
     .company-title {
       font-weight: 600;
       text-shadow: -4px 4px 0px var(--primaryColor2);

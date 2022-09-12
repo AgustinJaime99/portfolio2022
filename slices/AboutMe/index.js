@@ -144,10 +144,11 @@ const ContainerAbout = styled.div`
 const InfoSection = styled.div`
   display: flex;
   margin: 5rem 0 0 0;
+  width: 100%;
+  justify-content: space-around;
 
   .text {
-    max-width: 800px;
-    padding: 0 25rem 0 0;
+    max-width: 600px;
 
     h4 {
       font-size: 4.5rem;
@@ -164,6 +165,25 @@ const InfoSection = styled.div`
   }
 
   @media (max-width: 768px) {
-    flex-direction: column-reverse;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 2em;
+    .img-container {
+      margin-top: 2em;
+      width: 100%;
+    }
+
+    .text {
+      width: auto;
+
+      h4 {
+        font-size: 2.7rem;
+      }
+      .description {
+        p {
+          font-size: 2rem;
+        }
+      }
+    }
   }
 `;

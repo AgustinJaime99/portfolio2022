@@ -45,7 +45,7 @@ const Home = ({ slice }) => {
   return (
     <Container variants={sectionVariant} initial='hidden' animate='visible'>
       <div className='home'>
-        <div>
+        <div className='section-action'>
           <div className='text-main'>
             <motion.span className='title' variants={spanVariant}>
               {slice.primary.title && <PrismicRichText field={slice.primary.title} />}
@@ -154,19 +154,40 @@ const Container = styled(motion.div)`
     }
   }
 
+  @media (max-width: 1500px) {
+    .home {
+      .img {
+        div {
+          width: 400px !important;
+          height: 500px !important;
+        }
+      }
+    }
+    svg {
+      width: 400px !important;
+      height: 500px !important;
+    }
+  }
+
   @media (max-width: 768px) {
+    padding: 0rem 1em 0;
     h1 {
       text-align: center;
-      font-size: 4.7rem;
+      font-size: 3.7rem;
     }
 
     p {
       text-align: center;
-      font-size: 4.7rem;
+      font-size: 3.7rem;
     }
 
+    .section-action {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2em;
+    }
     .home {
-      padding: 4rem 0;
       .img {
         display: none;
         div {
@@ -177,22 +198,6 @@ const Container = styled(motion.div)`
     }
     svg {
       width: 300px !important;
-      height: 500px !important;
-    }
-  }
-
-  @media (max-width: 1500px) {
-    .home {
-      padding: 10rem 0 0 0;
-      .img {
-        div {
-          width: 400px !important;
-          height: 500px !important;
-        }
-      }
-    }
-    svg {
-      width: 400px !important;
       height: 500px !important;
     }
   }

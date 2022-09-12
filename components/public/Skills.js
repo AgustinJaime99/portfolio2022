@@ -41,16 +41,28 @@ export default Skills;
 const Container = styled.div`
   display: flex;
   gap: 5em;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const ContainerInfo = styled.div`
   overflow: hidden;
   padding: 3em;
   background-color: #e1e2dc;
-  width: 800px;
+
+  max-width: 500px;
   height: 300px;
   border-radius: 12px;
   filter: drop-shadow(-6px 6px 0px #217dc0);
+  @media (max-width: 768px) {
+    margin: 0 2em;
+    padding: 1.5em;
+    height: auto;
+    min-height: 300px;
+  }
 `;
 
 const ContainerIcons = styled.div`
@@ -59,4 +71,7 @@ const ContainerIcons = styled.div`
   gap: 2em;
   max-width: 700px;
   justify-content: center;
+  @media (max-width: 768px) {
+    margin: 0 2em;
+  }
 `;
