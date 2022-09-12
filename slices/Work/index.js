@@ -182,6 +182,11 @@ const Container = styled.div`
     color: var(--mainBlack);
     padding: 0 5em 10em;
   }
+  @media (max-width: 768px) {
+    section {
+      padding: 0 2em 4em;
+    }
+  }
 `;
 
 const ContainerB21Img = styled.div`
