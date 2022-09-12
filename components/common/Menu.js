@@ -38,10 +38,10 @@ const HeaderContainer = styled.header`
 
 const MainLogo = styled.div`
   cursor: pointer;
-  width: 45px;
-  height: 45px;
+  width: 60px;
+  height: 60px;
   @media (max-width: 768px) {
-    width: 30px;
-    height: 30px;
+    width: 55px;
+    height: 55px;
   }
 `;

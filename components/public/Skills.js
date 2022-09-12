@@ -52,7 +52,7 @@ const ContainerInfo = styled.div`
   overflow: hidden;
   padding: 3em;
   background-color: #e1e2dc;
-
+  min-width: 500px;
   max-width: 500px;
   height: 300px;
   border-radius: 12px;
@@ -62,6 +62,8 @@ const ContainerInfo = styled.div`
     padding: 1.5em;
     height: auto;
     min-height: 300px;
+    width: auto;
+    min-width: auto;
   }
 `;
 
