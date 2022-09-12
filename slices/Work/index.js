@@ -252,4 +252,12 @@ const ContainerAbout = styled.div`
       border-radius: 10px;
     }
   }
+
+  @media (max-width: 768px) {
+    .title {
+      h1 {
+        font-size: 3.5rem;
+      }
+    }
+  }
 `;
