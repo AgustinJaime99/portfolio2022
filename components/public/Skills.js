@@ -11,7 +11,6 @@ import StyledComponentsIcon from '../../public/icons/StyledCompIcon';
 import TextSkills from './TextSkills';
 
 const Skills = ({ text }) => {
-  console.log(text);
   const [selected, setSelected] = useState(1);
 
   const handleSelect = (id) => {

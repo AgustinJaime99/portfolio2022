@@ -15,7 +15,7 @@ export const LanguageSwitcher = ({ altLangs = [], localeLang, menu }) => {
         <Image src={Mundi} alt='collapsable-arrow-down' width={32} height={32} />
         <span>{localeLang.slice(0, 2).toUpperCase()}</span>
       </div>
-      <AnimatePresence exitBeforeEnter>
+      <AnimatePresence mode='wait'>
         {show &&
           altLangs.map((altLang) => {
             return (
