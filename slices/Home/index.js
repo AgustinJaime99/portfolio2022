@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { PrismicRichText } from '@prismicio/react';
-import Lottie from 'react-lottie';
+// import Lottie from 'react-lottie';
+import { useLottie } from 'lottie-react';
 import animationData from '../../public/animations/95348-coding-boy.json';
 import { motion } from 'framer-motion';
 
@@ -10,6 +11,8 @@ const Home = ({ slice }) => {
     autoplay: true,
     animationData: animationData,
   };
+
+  const { View } = useLottie(defaultOptions);
 
   const sectionVariant = {
     hidden: { opacity: 0 },
@@ -58,7 +61,8 @@ const Home = ({ slice }) => {
           </a>
         </div>
         <div className='img'>
-          <Lottie options={defaultOptions} height={800} width={800} />
+          {View}
+          {/* <View options={defaultOptions} height={800} width={800} /> */}
         </div>
       </div>
     </Container>
@@ -144,6 +148,10 @@ const Container = styled(motion.div)`
     max-width: 1500px;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    .img {
+      max-width: 800px;
+    }
   }
 
   @media (max-width: 768px) {
