@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 import Logo from '../../public/Logo.png';
 import LanguageSwitcher from './LanguageSwitcher';
+import Navigation from './Navigation';
 
 export const Header = ({ menu, altLangs, localeLang }) => {
   return (
@@ -16,7 +17,10 @@ export const Header = ({ menu, altLangs, localeLang }) => {
             </a>
           </Link>
         </MainLogo>
-        <LanguageSwitcher altLangs={altLangs} menu={menu} localeLang={localeLang} />
+        <div className='menu'>
+          <Navigation menu={menu} />
+          <LanguageSwitcher altLangs={altLangs} menu={menu} localeLang={localeLang} />
+        </div>
       </div>
     </HeaderContainer>
   );
@@ -26,6 +30,12 @@ const HeaderContainer = styled.header`
   background-color: var(--mainBlack);
   width: 100%;
   height: 40px;
+  z-index: 10;
+
+  .menu {
+    display: flex;
+    align-items: center;
+  }
 
   .container {
     padding: 24px 0;
@@ -33,6 +43,7 @@ const HeaderContainer = styled.header`
     margin: auto;
     width: 79%;
     justify-content: space-between;
+    align-items: center;
   }
 `;
 

@@ -4,6 +4,9 @@
     "work": {},
     "menu": {
       "menu_links": {}
+    },
+    "footer": {
+      "menufooter": {}
     }
   },
   "slices": {
@@ -61,6 +64,7 @@
       "default": {
         "primary": {}
       }
-    }
+    },
+    "Contact": {}
   }
 }

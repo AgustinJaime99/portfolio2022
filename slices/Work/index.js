@@ -163,7 +163,7 @@ const ContainerB21Img = styled.div`
     }
 
     h5 {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
       max-width: 500px;
       color: var(--mainBlack);
       font-weight: 500;

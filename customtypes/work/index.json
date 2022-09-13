@@ -18,6 +18,9 @@
             },
             "work": {
               "type": "SharedSlice"
+            },
+            "contact": {
+              "type": "SharedSlice"
             }
           }
         }
