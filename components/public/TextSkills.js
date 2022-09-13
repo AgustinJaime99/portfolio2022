@@ -183,4 +183,8 @@ const Container = styled.div`
 
 const DivMotion = styled(motion.div)`
   position: relative;
+
+  p {
+    position: absolute;
+  }
 `;
