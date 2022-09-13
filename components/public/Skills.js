@@ -57,12 +57,14 @@ const ContainerInfo = styled.div`
   height: 300px;
   border-radius: 12px;
   filter: drop-shadow(-6px 6px 0px #217dc0);
+  position: relative;
+  overflow-y: scroll;
   @media (max-width: 768px) {
-    margin: 0 2em;
+    margin: 0 auto;
     padding: 1.5em;
     height: auto;
-    min-height: 200px;
-    width: auto;
+    min-height: 250px;
+
     min-width: 292px;
   }
 `;
