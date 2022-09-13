@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import Logo from '../../public/Logo.png';
 import LanguageSwitcher from './LanguageSwitcher';
 import Navigation from './Navigation';
+import NavigationMobile from './NavigationMobile';
 
 export const Header = ({ menu, altLangs, localeLang }) => {
   return (
@@ -21,6 +22,9 @@ export const Header = ({ menu, altLangs, localeLang }) => {
           <Navigation menu={menu} />
           <LanguageSwitcher altLangs={altLangs} menu={menu} localeLang={localeLang} />
         </div>
+        <div className='menu-mobile'>
+          <NavigationMobile menu={menu} localeLang={localeLang} altLangs={altLangs} />
+        </div>
       </div>
     </HeaderContainer>
   );
@@ -29,8 +33,10 @@ export const Header = ({ menu, altLangs, localeLang }) => {
 const HeaderContainer = styled.header`
   background-color: var(--mainBlack);
   width: 100%;
-  height: 40px;
-  z-index: 10;
+  height: auto;
+  z-index: 110;
+  position: fixed;
+  top: 0;
 
   .menu {
     display: flex;
@@ -45,6 +51,21 @@ const HeaderContainer = styled.header`
     justify-content: space-between;
     align-items: center;
   }
+  @media (max-width: 768px) {
+    height: 55px;
+    display: flex;
+    .container {
+      padding: 0;
+      display: flex;
+      margin: auto;
+      width: 79%;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .menu {
+      display: none;
+    }
+  }
 `;
 
 const MainLogo = styled.div`
@@ -52,7 +73,7 @@ const MainLogo = styled.div`
   width: 60px;
   height: 60px;
   @media (max-width: 768px) {
-    width: 55px;
-    height: 55px;
+    width: 35px;
+    height: 35px;
   }
 `;

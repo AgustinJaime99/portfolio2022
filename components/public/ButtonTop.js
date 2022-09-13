@@ -42,4 +42,8 @@ const Anchor = styled.a`
   &:hover {
     bottom: 3.8em;
   }
+
+  @media (max-width: 768px) {
+    right: 1em;
+  }
 `;

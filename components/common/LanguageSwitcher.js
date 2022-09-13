@@ -6,14 +6,17 @@ import styled from 'styled-components';
 import { linkResolver } from '../../prismicio';
 import Mundi from '../../public/mundi.svg';
 
-export const LanguageSwitcher = ({ altLangs = [], localeLang, menu }) => {
+export const LanguageSwitcher = ({ altLangs = [], localeLang, mobile }) => {
+  console.log(mobile);
   const [show, setShow] = useState(false);
 
   return (
-    <Container>
+    <Container mobile={mobile}>
       <div onClick={() => setShow(!show)} className='lang-controller'>
         <Image src={Mundi} alt='collapsable-arrow-down' width={32} height={32} />
-        <span>{localeLang.slice(0, 2).toUpperCase()}</span>
+        <span>
+          <p>{localeLang.slice(0, 2).toUpperCase()}</p>
+        </span>
       </div>
       <AnimatePresence mode='wait'>
         {show &&
@@ -53,6 +56,15 @@ const Container = styled.div`
     width: 60px;
     align-items: center;
     justify-content: space-between;
+    span {
+      p {
+        text-shadow: ${(props) => (!props.mobile ? 'none' : '-1.5px 1.5px 1px #020202')};
+      }
+
+      img {
+        filter: ${(props) => (!props.mobile ? 'none' : 'drop-shadow(-1.5px 1.5px 1px #020202)')};
+      }
+    }
   }
 
   .link {
