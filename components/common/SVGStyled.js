@@ -17,6 +17,6 @@ export const SvgStyled = styled.svg`
     height: ${(props) => (props.box ? '12em' : '3em')} !important;
     right: ${(props) => props.box && '-3em'};
     left: auto;
-    top: ${(props) => props.box && '4em'};
+    top: ${(props) => props.box && '1em'};
   }
 `;

@@ -61,7 +61,7 @@ const ContainerInfo = styled.div`
     margin: 0 2em;
     padding: 1.5em;
     height: auto;
-    min-height: 300px;
+    min-height: 200px;
     width: auto;
     min-width: auto;
   }
