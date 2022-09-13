@@ -7,12 +7,12 @@ const Footer = () => {
     <Container>
       <div className='social'>
         <div className='container-linkedin'>
-          <a rel='noopener' target='_blank' href='https://www.linkedin.com/in/agustin-diego-jaime-4033041b7/'>
+          <a rel='noopener noreferrer' target='_blank' href='https://www.linkedin.com/in/agustin-diego-jaime-4033041b7/'>
             <LinkedInIcon />
           </a>
         </div>
         <div className='container-github'>
-          <a rel='noopener' target='_blank' href='https://github.com/AgustinJaime99'>
+          <a rel='noopener noreferrer' target='_blank' href='https://github.com/AgustinJaime99'>
             <GithubIcon />
           </a>
         </div>
