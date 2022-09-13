@@ -39,7 +39,7 @@ const Home = ({ slice }) => {
 
   const spanVariant = {
     initial: {
-      x: '-20vw',
+      x: -20,
       opacity: 0,
     },
     visible: {

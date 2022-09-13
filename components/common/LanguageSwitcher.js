@@ -7,7 +7,6 @@ import { linkResolver } from '../../prismicio';
 import Mundi from '../../public/mundi.svg';
 
 export const LanguageSwitcher = ({ altLangs = [], localeLang, mobile }) => {
-  console.log(mobile);
   const [show, setShow] = useState(false);
 
   return (

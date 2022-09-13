@@ -18,15 +18,15 @@ const Work = ({ slice }) => {
   const variants = {
     initial: {
       opacity: 0,
-      x: -50,
+      x: -20,
     },
     second_initial: {
       opacity: 0,
-      x: 50,
+      x: 20,
     },
     title: {
       opacity: 0,
-      y: 50,
+      y: 20,
     },
     animate_text: {
       opacity: 1,
