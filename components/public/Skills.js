@@ -58,8 +58,9 @@ const ContainerInfo = styled.div`
   border-radius: 12px;
   filter: drop-shadow(-6px 6px 0px #217dc0);
   position: relative;
-  overflow-y: scroll;
+
   @media (max-width: 768px) {
+    overflow-y: scroll;
     margin: 0 auto;
     padding: 1.5em;
     height: auto;
