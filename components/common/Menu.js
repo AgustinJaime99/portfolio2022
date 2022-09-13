@@ -48,7 +48,7 @@ const HeaderContainer = styled.header`
   }
 
   .container {
-    padding: 24px 0;
+    padding: 8px 0;
     display: flex;
     margin: auto;
     width: 79%;
@@ -77,8 +77,8 @@ const HeaderContainer = styled.header`
 
 const MainLogo = styled.div`
   cursor: pointer;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   @media (max-width: 768px) {
     width: 35px;
     height: 35px;
