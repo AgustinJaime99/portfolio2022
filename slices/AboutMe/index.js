@@ -76,11 +76,11 @@ const Container = styled.div`
 `;
 
 const ContainerAbout = styled.div`
-  margin: auto;
-  max-width: 1200px;
+  width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin: auto;
 
   .title {
     text-align: center;

@@ -7,13 +7,8 @@ import { useInView } from 'react-intersection-observer';
 import { GlobalContext } from '../../context/GlobalContext';
 import ImageFade from '../../components/public/home/ImageFade';
 import { motion, useAnimation } from 'framer-motion';
-
 import PhoneB21 from '../../public/B21phone.png';
-import NoteBookB21 from '../../public/Notebook.png';
-import TabletB21 from '../../public/tabletB21.png';
-import PhonePulsar from '../../public/iPhone-Apple-PNG.png';
-import PcPulsar from '../../public/Pulsar-pc.png';
-
+import PhonePulsar from '../../public/pulsar.png';
 import Button from '../../components/common/Button';
 
 const Work = ({ slice }) => {
@@ -24,6 +19,10 @@ const Work = ({ slice }) => {
     initial: {
       opacity: 0,
       x: -50,
+    },
+    second_initial: {
+      opacity: 0,
+      x: 50,
     },
     title: {
       opacity: 0,
@@ -68,18 +67,18 @@ const Work = ({ slice }) => {
           <motion.span variants={variants} initial='title' animate={controls} className='title'>
             {slice.primary.title && <PrismicRichText field={slice.primary.title} />}
           </motion.span>
-          <ContainerB21Img>
+          <ContainerB21Img mobileColumn='column-reverse'>
             <div className='info'>
               <motion.span animate={controls} className='company-title' style={{ display: 'inline-block' }} variants={variants} initial='initial'>
                 {slice.primary.title_company2 && <PrismicRichText field={slice.primary.title_company2} />}
               </motion.span>
-              <motion.span variants={variants} initial='initial' animate={controls} className='description-company1'>
+              <motion.div variants={variants} initial='initial' animate={controls} className='description-company1'>
                 {slice.primary.description_company2 && <PrismicRichText field={slice.primary.description_company2} />}
-              </motion.span>
+              </motion.div>
               {slice.primary.link_company2 && (
                 <Button
                   href={'https://www.b21.com/'}
-                  margin='6em 0 0 0'
+                  margin='0em 0 0 0'
                   shadowColor={'#0d324d'}
                   colorText={'#0d324d'}
                   secondaryColor='#e1e2dc'
@@ -92,67 +91,27 @@ const Work = ({ slice }) => {
                 </Button>
               )}
             </div>
-            {/* <ImageFade
-              src={PhoneB21}
-              minWidth='70%'
-              minHeight='70%'
-              customInView={inView}
-              customRef={ref}
-              isMobile='none'
-              className='image'
-              zIndex={30}
-              leftEm='1.3em'
-              botEm='0.5em'
-            />
-            <ImageFade
-              src={TabletB21}
-              minWidth='70%'
-              minHeight='70%'
-              customInView={inView}
-              customRef={ref}
-              isMobile='none'
-              className='image'
-              zIndex={20}
-              leftEm='9.5em'
-              botEm='3.9em'
-              delay={0.5}
-            />
-            <ImageFade
-              src={NoteBookB21}
-              customInView={inView}
-              customRef={ref}
-              isMobile='none'
-              className='image'
-              zIndex={10}
-              leftEm='0em'
-              botEm='6em'
-              delay={0.7}
-            /> */}
+            <ImageFade src={PhoneB21} customInView={inView} customRef={ref} />
           </ContainerB21Img>
           <ContainerB21Img>
-            {/* <ImageFade
-              src={PhonePulsar}
-              minWidth='100%'
-              minHeight='100%'
-              customInView={inView}
-              customRef={ref}
-              isMobile='none'
-              className='image'
-              zIndex={30}
-              leftEm='3em'
-              botEm='11em'
-            /> */}
+            <ImageFade src={PhonePulsar} customInView={inView} customRef={ref} />
             <div className='info'>
-              <motion.span className='company-title' animate={controls} style={{ display: 'inline-block' }} variants={variants} initial='initial'>
+              <motion.span
+                className='company-title'
+                animate={controls}
+                style={{ display: 'inline-block' }}
+                variants={variants}
+                initial='second_initial'
+              >
                 {slice.primary.title_company1 && <PrismicRichText field={slice.primary.title_company1} />}
               </motion.span>
-              <motion.span variants={variants} initial='initial' animate={controls} className='description-company1'>
+              <motion.div variants={variants} initial='second_initial' animate={controls} className='description-company1'>
                 {slice.primary.description_company1 && <PrismicRichText field={slice.primary.description_company1} />}
-              </motion.span>
+              </motion.div>
               {slice.primary.link_company1 && (
                 <Button
                   href={'https://www.campuspulsar.gob.ar/'}
-                  margin='6em 0 0 0'
+                  margin='0em 0 0 0'
                   shadowColor={'#0d324d'}
                   colorText={'#0d324d'}
                   secondaryColor='#e1e2dc'
@@ -190,71 +149,67 @@ const Container = styled.div`
 `;
 
 const ContainerB21Img = styled.div`
-  margin: 6em 0 3em 0;
   padding: 1rem;
-  height: 450px;
   max-width: 1200px;
+  display: flex;
+  gap: 6em;
+  align-items: center;
 
   .info {
-    .company-title {
-      font-weight: 600;
-      text-shadow: -4px 4px 0px var(--primaryColor2);
-      h3 {
-        font-size: 8rem;
-      }
-    }
     strong {
+      font-size: 2.8rem;
       font-weight: 600;
       text-shadow: -2.5px 2.5px 0.5px var(--primaryColor3);
     }
 
     h5 {
-      text-shadow: -2.5px 2.5px 0px var(--primaryColor3);
-      font-size: 2.8rem;
+      font-size: 1.6rem;
       max-width: 500px;
       color: var(--mainBlack);
-      font-weight: 600;
+      font-weight: 500;
+      margin-bottom: 2em;
+    }
+  }
+
+  .company-title {
+    font-weight: 600;
+    text-shadow: -4px 4px 0px var(--primaryColor2);
+    h3 {
+      font-size: 5rem;
     }
   }
 
   @media (max-width: 768px) {
-    max-width: 300px;
-    .info {
-      .company-title {
-        h3 {
-          font-size: 4rem;
-        }
-        h5 {
-          font-size: 1.8rem;
-          max-width: 200px;
-        }
+    gap: 3em;
+    flex-direction: ${(props) => (props.mobileColumn ? props.mobileColumn : 'column')};
+    width: auto;
+
+    .company-title {
+      h3 {
+        font-size: 4rem;
+      }
+      h5 {
+        font-size: 1.8rem;
+        max-width: 200px;
       }
     }
   }
 `;
 
 const ContainerAbout = styled.div`
-  margin: auto;
   max-width: 1200px;
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin: auto;
+
+  gap: 5em 0;
 
   .title {
     text-align: center;
     text-shadow: -2.5px 2.5px 0px var(--primaryColor2);
     h1 {
       font-size: 6.5rem;
-    }
-  }
-
-  .img-container {
-    border-radius: 10px;
-    width: 450px;
-    box-shadow: -10px 10px 0px #2e93dc;
-
-    img {
-      border-radius: 10px;
     }
   }
 

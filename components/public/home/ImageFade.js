@@ -3,23 +3,7 @@ import Image from 'next/image';
 import { motion, useAnimation } from 'framer-motion';
 import styled from 'styled-components';
 
-const ImageFade = ({
-  src,
-  customRef,
-  customInView,
-  widthImg,
-  isDesktop,
-  borderRadius,
-  zIndex,
-  alingSelf,
-  isMobile,
-  topEm,
-  leftEm,
-  botEm,
-  minHeight,
-  minWidth,
-  delay = 0.3,
-}) => {
+const ImageFade = ({ src, customRef, customInView, widthImg, isDesktop, borderRadius, alingSelf, isMobile, delay = 0.3, maxHeight }) => {
   const controls = useAnimation();
   const variants = {
     initial: {
@@ -54,43 +38,23 @@ const ImageFade = ({
       border={borderRadius}
       aling={alingSelf}
       ismobile={isMobile}
-      zindex={zIndex}
-      topimg={topEm}
-      leftem={leftEm}
-      botem={botEm}
-      minwidth={minWidth}
-      minheight={minHeight}
+      maxheight={maxHeight}
     >
-      <Image src={src} placeholder='blur' quality={100} alt='background-image' />
+      <Image src={src} alt='work-image' layout='responsive' />
     </ImageContainer>
   );
 };
 
 export default ImageFade;
 
-const ImageContainer = styled(motion.div)`
-  display: block;
-  position: absolute;
-  z-index: ${(props) => props?.zindex};
-  width: 50%;
-  height: 50%;
-  top: ${(props) => props.topimg};
-  bottom: ${(props) => props.botem};
-  right: ${(props) => props?.leftem};
+// const ImageContainer = styled(motion.div)`
+//   display: inline-block;
+//   width: 450px;
+// `;
 
-  span {
-    img {
-      min-width: ${(props) => props.minwidth || '100%'}!important;
-      min-height: ${(props) => props.minheight || '100%'} !important;
-    }
-  }
-
-  .rounded {
-    border-radius: ${(props) => (props.border ? props.border : '60px 0 0 60px')};
-  }
+const ImageContainer = styled.div`
+  width: 550px;
   @media (max-width: 768px) {
-    display: ${(props) => props.ismobile} !important;
-    align-self: ${(props) => (props.aling ? props.aling : 'flex-end')};
-    margin: 25px 0 0 0;
+    width: 100%;
   }
 `;
