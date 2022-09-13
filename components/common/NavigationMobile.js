@@ -30,13 +30,34 @@ const NavigationMobile = ({ menu, altLangs, localeLang }) => {
             </div>
             <ul>
               {menu.data?.menu_links.map((menuLink, inx) => (
-                <li key={'liNavigation' + inx}>
+                <motion.li
+                  key={'liNavigation' + inx}
+                  initial={{ opacity: 0 }}
+                  animate={{
+                    opacity: 1,
+                    transition: {
+                      duration: 0.3,
+                      delay: 0.5,
+                    },
+                  }}
+                  exit={{ opacity: 0 }}
+                >
                   <MenuLink href={menuLink['anchorlink'][0].text}>{menuLink.label[0].text}</MenuLink>
-                </li>
+                </motion.li>
               ))}
-              <li>
+              <motion.li
+                initial={{ opacity: 0 }}
+                animate={{
+                  opacity: 1,
+                  transition: {
+                    duration: 0.3,
+                    delay: 0.5,
+                  },
+                }}
+                exit={{ opacity: 0 }}
+              >
                 <LanguageSwitcher altLangs={altLangs} mobile={true} localeLang={localeLang} />
-              </li>
+              </motion.li>
             </ul>
           </motion.div>
         )}
@@ -55,7 +76,7 @@ const MainMenu = styled.div`
 
   .hidden {
     position: absolute;
-    background-color: transparent;
+    background-color: #02020270;
     height: 100vh;
     top: 0;
     left: 0;
@@ -75,14 +96,15 @@ const MainMenu = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: 4em;
-    margin-top: 6em;
+    gap: 1.5em;
+    margin-top: 4em;
     li {
       margin: 0 1rem;
       padding: 0.5rem 1rem;
       cursor: pointer;
     }
   }
+
   @media (max-width: 768px) {
     padding: 0.5rem 0.4rem;
     ul {
