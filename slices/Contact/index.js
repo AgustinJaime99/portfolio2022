@@ -6,7 +6,9 @@ const Contact = ({ slice }) => (
     <section id='contact'>
       <span className='title'>{slice.primary.title && <PrismicRichText field={slice.primary.title} />}</span>
       <span className='description'>{slice.primary.description && <PrismicRichText field={slice.primary.description} />}</span>
-      <span className='button'>{slice?.primary?.button && <PrismicRichText field={slice.primary.button} />}</span>
+      <span className='button'>
+        <a href='mailto:agustindiegojaime@gmail.com'>{slice?.primary?.button && <PrismicRichText field={slice.primary.button} />}</a>
+      </span>
     </section>
   </Container>
 );
@@ -40,6 +42,10 @@ const Container = styled.div`
       margin: 2em 0 0 0;
       cursor: pointer;
       transition: all ease-in-out 0.3s;
+      a {
+        text-decoration: none;
+        color: var(--mainBg);
+      }
       p {
         font-size: 2.5rem;
         font-weight: 600;

@@ -43,6 +43,10 @@ const HeaderContainer = styled.header`
     align-items: center;
   }
 
+  .menu-mobile {
+    display: none;
+  }
+
   .container {
     padding: 24px 0;
     display: flex;
@@ -64,6 +68,9 @@ const HeaderContainer = styled.header`
     }
     .menu {
       display: none;
+    }
+    .menu-mobile {
+      display: inherit;
     }
   }
 `;
