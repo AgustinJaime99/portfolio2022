@@ -3,6 +3,7 @@ import { AnimatePresence } from 'framer-motion';
 import styled from 'styled-components';
 import { Header } from './Menu';
 import { GlobalContext } from '../../context/GlobalContext';
+import ButtonTop from '../public/ButtonTop';
 
 const PageContainer = styled.div`
   height: 100%;
@@ -21,6 +22,7 @@ const Layout = ({ children, altLangs, menu, footer, localeLang }) => {
     <PageContainer BgColor={contextDataGlobal?.backgroundColor}>
       <Header altLangs={altLangs} menu={menu} localeLang={localeLang} />
       <AnimatePresence mode='wait'>{children}</AnimatePresence>
+      <AnimatePresence mode='wait'>{contextDataGlobal?.showButton && <ButtonTop />}</AnimatePresence>
       {/* TODO:  <Footer /> */}
     </PageContainer>
   );

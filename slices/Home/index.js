@@ -1,16 +1,27 @@
 import styled from 'styled-components';
 import { PrismicRichText } from '@prismicio/react';
-// import Lottie from 'react-lottie';
+import { useEffect, useContext } from 'react';
+import { useInView } from 'react-intersection-observer';
 import { useLottie } from 'lottie-react';
 import animationData from '../../public/animations/95348-coding-boy.json';
 import { motion } from 'framer-motion';
+import { GlobalContext } from '../../context/GlobalContext';
 
 const Home = ({ slice }) => {
+  const [ref, inView] = useInView();
+  const { contextDataGlobal, setContextDataGlobal } = useContext(GlobalContext);
+
   const defaultOptions = {
     loop: true,
     autoplay: true,
     animationData: animationData,
   };
+
+  useEffect(() => {
+    if (inView) {
+      setContextDataGlobal({ ...contextDataGlobal, showButton: false });
+    }
+  }, [inView]);
 
   const { View } = useLottie(defaultOptions);
 
@@ -43,7 +54,7 @@ const Home = ({ slice }) => {
   };
 
   return (
-    <Container variants={sectionVariant} initial='hidden' animate='visible'>
+    <Container variants={sectionVariant} initial='hidden' animate='visible' ref={ref} id='home'>
       <div className='home'>
         <div className='section-action'>
           <div className='text-main'>
@@ -73,7 +84,7 @@ export default Home;
 const Container = styled(motion.div)`
   background-color: var(--mainBlack);
   display: flex;
-
+  scroll-behavior: smooth;
   min-height: 100%;
   width: 100%;
   height: 100vh;

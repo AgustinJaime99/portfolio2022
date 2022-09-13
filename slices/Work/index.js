@@ -55,7 +55,7 @@ const Work = ({ slice }) => {
 
   useEffect(() => {
     if (inView) {
-      setContextDataGlobal({ ...contextDataGlobal, backgroundColor: '#e1e2dc' });
+      setContextDataGlobal({ ...contextDataGlobal, backgroundColor: '#e1e2dc', showButton: true });
     }
   }, [inView]);
 
