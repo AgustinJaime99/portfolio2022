@@ -63,7 +63,7 @@ const ContainerInfo = styled.div`
     height: auto;
     min-height: 200px;
     width: auto;
-    min-width: auto;
+    min-width: 292px;
   }
 `;
 
