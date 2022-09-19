@@ -165,7 +165,7 @@ const Container = styled(motion.div)`
     }
   }
 
-  @media (max-width: 1500px) {
+  @media (max-width: 1615px) {
     .home {
       .img {
         div {

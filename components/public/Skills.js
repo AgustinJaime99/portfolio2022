@@ -61,11 +61,11 @@ const ContainerInfo = styled.div`
 
   @media (max-width: 768px) {
     overflow-y: scroll;
-    margin: 0 auto;
+    margin: 0 1em;
     padding: 1.5em;
     height: auto;
     min-height: 250px;
-
+    width: auto;
     min-width: 292px;
   }
 `;

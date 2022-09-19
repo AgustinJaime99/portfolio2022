@@ -28,7 +28,7 @@ const Container = styled.div`
     .title {
       h1 {
         font-size: 6.5rem;
-        text-shadow: -3.5px 3.5px 0px var(--primaryColor3);
+        text-shadow: -3.5px 3.5px 0px var(--variant3);
       }
     }
     .description {
