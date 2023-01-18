@@ -89,9 +89,10 @@ const Container = styled(motion.div)`
   width: 100%;
   height: 100vh;
   align-items: center;
+  justify-content: center;
   border-bottom: 0;
   font-weight: 400;
-  padding: 0 5.6rem;
+  padding: 0 30rem;
   margin-bottom: 0;
   top: 0;
   left: 0;
@@ -142,30 +143,52 @@ const Container = styled(motion.div)`
 
   h1 {
     color: var(--mainBg);
-    font-size: 6.7rem;
+    font-size: 5.7rem;
   }
 
   p {
     background: -webkit-linear-gradient(45deg, var(--mainBg), var(--secondaryColor1));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 6.7rem;
+    font-size: 5.7rem;
     font-weight: 700;
   }
   .home {
-    margin: auto;
+    margin: 5rem 0 0 0;
     display: flex;
     align-items: center;
-    max-width: 1500px;
-    justify-content: space-between;
+    width: 100%;
     flex-wrap: wrap;
-
+    justify-content: space-between;
     .img {
-      max-width: 800px;
+      max-width: 700px;
     }
   }
 
   @media (max-width: 1615px) {
+    padding: 0 10rem;
+    .home {
+      .img {
+        div {
+          width: 500px !important;
+          height: 600px !important;
+        }
+      }
+    }
+    svg {
+      width: 500px !important;
+      height: 600px !important;
+    }
+  }
+
+  @media (max-width: 1025px) {
+    padding: 0 5rem;
+    p {
+      font-size: 4rem;
+    }
+    h1 {
+      font-size: 4rem;
+    }
     .home {
       .img {
         div {
@@ -199,6 +222,7 @@ const Container = styled(motion.div)`
       gap: 2em;
     }
     .home {
+      justify-content: center;
       .img {
         display: none;
         div {

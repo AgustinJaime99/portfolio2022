@@ -139,22 +139,31 @@ const Container = styled.div`
     width: 100%;
     background-color: var(--mainBg);
     color: var(--mainBlack);
-    padding: 0 5em 10em;
+    padding: 0 30rem 10rem;
+  }
+  @media (max-width: 1615px) {
+    section {
+      padding: 0 10rem 10rem;
+    }
+  }
+  @media (max-width: 1024px) {
+    section {
+      padding: 0 5rem 10rem;
+    }
   }
   @media (max-width: 768px) {
     section {
-      padding: 0 2em 4em;
+      padding: 0 2rem 4em;
     }
   }
 `;
 
 const ContainerB21Img = styled.div`
-  padding: 1rem;
-  max-width: 1200px;
+  width: 100%;
   display: flex;
   gap: 6em;
   align-items: center;
-
+  justify-content: space-between;
   .info {
     strong {
       font-size: 2.8rem;
@@ -197,12 +206,9 @@ const ContainerB21Img = styled.div`
 `;
 
 const ContainerAbout = styled.div`
-  max-width: 1200px;
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin: auto;
-
   gap: 5em 0;
 
   .title {
