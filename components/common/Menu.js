@@ -51,18 +51,30 @@ const HeaderContainer = styled.header`
     padding: 8px 0;
     display: flex;
     margin: auto;
-    width: 79%;
+    padding: 1rem 30rem;
     justify-content: space-between;
     align-items: center;
+    height: 105px;
+  }
+  @media (max-width: 1615px) {
+    .container {
+      padding: 1rem 10rem;
+    }
+  }
+  @media (max-width: 1025px) {
+    .container {
+      padding: 1rem 5rem;
+    }
   }
   @media (max-width: 768px) {
     height: 55px;
     display: flex;
     .container {
-      padding: 0;
+      padding: 0 2rem;
       display: flex;
       margin: auto;
-      width: 79%;
+      height: 55px;
+      width: 100%;
       justify-content: space-between;
       align-items: center;
     }
@@ -77,8 +89,8 @@ const HeaderContainer = styled.header`
 
 const MainLogo = styled.div`
   cursor: pointer;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   @media (max-width: 768px) {
     width: 35px;
     height: 35px;

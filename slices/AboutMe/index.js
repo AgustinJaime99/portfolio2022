@@ -81,6 +81,7 @@ const ContainerAbout = styled.div`
   align-items: center;
   flex-direction: column;
   margin: auto;
+  padding: 0 30rem;
 
   .title {
     text-align: center;
@@ -139,13 +140,23 @@ const ContainerAbout = styled.div`
       }
     }
   }
+
+  @media (max-width: 1615px) {
+    padding: 0 10rem;
+  }
+  @media (max-width: 1025px) {
+    padding: 0 5rem;
+  }
+  @media (max-width: 768px) {
+    padding: 0 2rem;
+  }
 `;
 
 const InfoSection = styled.div`
   display: flex;
   margin: 5rem 0 0 0;
   width: 100%;
-  justify-content: space-around;
+  justify-content: space-between;
 
   .text {
     max-width: 600px;
@@ -164,10 +175,15 @@ const InfoSection = styled.div`
     }
   }
 
+  @media (max-width: 1615px) {
+    align-items: center;
+    gap: 5rem;
+  }
+
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
-    padding: 0 2em;
+    padding: 0;
     .img-container {
       margin-top: 2em;
       width: 100%;
