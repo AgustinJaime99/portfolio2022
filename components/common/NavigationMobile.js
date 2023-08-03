@@ -18,9 +18,9 @@ const NavigationMobile = ({ menu, altLangs, localeLang }) => {
             initial={{ opacity: 0 }}
             animate={{
               opacity: 1,
-              backdropFilter: 'blur(10px)',
+              backdropFilter: 'blur(20px)',
               transition: {
-                duration: 0.3,
+                duration: 0.2,
               },
             }}
             exit={{ opacity: 0 }}
@@ -36,8 +36,8 @@ const NavigationMobile = ({ menu, altLangs, localeLang }) => {
                   animate={{
                     opacity: 1,
                     transition: {
-                      duration: 0.3,
-                      delay: 0.5,
+                      duration: 0.2,
+                      delay: 0.2,
                     },
                   }}
                   exit={{ opacity: 0 }}
@@ -50,8 +50,8 @@ const NavigationMobile = ({ menu, altLangs, localeLang }) => {
                 animate={{
                   opacity: 1,
                   transition: {
-                    duration: 0.3,
-                    delay: 0.5,
+                    duration: 0.2,
+                    delay: 0.2,
                   },
                 }}
                 exit={{ opacity: 0 }}
@@ -115,7 +115,7 @@ const MainMenu = styled.div`
   }
 `;
 const MenuLink = styled.a`
-  font-size: 1.8rem;
+  font-size: 3.8rem;
   text-decoration: none;
   color: var(--mainBg);
   transition: all ease-in-out 0.2s;

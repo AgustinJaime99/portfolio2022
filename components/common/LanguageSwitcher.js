@@ -12,7 +12,7 @@ export const LanguageSwitcher = ({ altLangs = [], localeLang, mobile }) => {
   return (
     <Container mobile={mobile}>
       <div onClick={() => setShow(!show)} className='lang-controller'>
-        <Image src={Mundi} alt='collapsable-arrow-down' width={32} height={32} />
+        <Image src={Mundi} alt='collapsable-arrow-down' width={mobile ? 40 : 32} height={mobile ? 40 : 32} />
         <span>
           <p>{localeLang.slice(0, 2).toUpperCase()}</p>
         </span>
@@ -46,17 +46,18 @@ export default LanguageSwitcher;
 
 const Container = styled.div`
   color: var(--mainBg);
-  font-size: 1.6rem;
+  font-size: ${(props) => (props.mobile ? '3.6rem' : '1.6rem')};
   user-select: none;
   z-index: 10;
   .lang-controller {
     display: flex;
     cursor: pointer;
-    width: 60px;
+    width: ${(props) => (props.mobile ? '100px' : '60px')};
     align-items: center;
     justify-content: space-between;
     span {
       p {
+        font-size: ${(props) => (props.mobile ? '3.6rem' : '1.6rem')};
         text-shadow: ${(props) => (!props.mobile ? 'none' : '-1.5px 1.5px 1px #020202')};
       }
 
