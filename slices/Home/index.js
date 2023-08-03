@@ -87,9 +87,7 @@ const Container = styled(motion.div)`
   scroll-behavior: smooth;
   min-height: 100%;
   width: 100%;
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
+  height: 95vh;
   border-bottom: 0;
   font-weight: 400;
   padding: 0 30rem;
@@ -143,7 +141,7 @@ const Container = styled(motion.div)`
 
   h1 {
     color: var(--mainBg);
-    font-size: 5.7rem;
+    font-size: 4.7rem;
   }
 
   p {
@@ -153,15 +151,21 @@ const Container = styled(motion.div)`
     font-size: 5.7rem;
     font-weight: 700;
   }
+  .text-main {
+    position: relative;
+    z-index: 10;
+  }
   .home {
-    margin: 5rem 0 0 0;
+    position: relative;
     display: flex;
     align-items: center;
     width: 100%;
     flex-wrap: wrap;
     justify-content: space-between;
     .img {
-      max-width: 700px;
+      position: absolute;
+      right: 0;
+      z-index: 8;
     }
   }
 
@@ -192,14 +196,14 @@ const Container = styled(motion.div)`
     .home {
       .img {
         div {
-          width: 400px !important;
-          height: 500px !important;
+          width: 600px !important;
+          height: 600px !important;
         }
       }
     }
     svg {
-      width: 400px !important;
-      height: 500px !important;
+      width: 600px !important;
+      height: 600px !important;
     }
   }
 
