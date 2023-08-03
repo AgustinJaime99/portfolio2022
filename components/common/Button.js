@@ -44,13 +44,13 @@ const Btn = styled.a`
     text-align: center;
     align-self: center;
     color: ${(props) => props.colorText};
-    transition: all ease-in 0.2s;
+    transition: all ease-in 0.1s;
     box-shadow: ${(props) => (props.shadowColor ? props.shadowColor : 'var(--secondaryColor1)')} -5px 5px 0px 2px;
     font-weight: 600;
 
     span {
       color: ${(props) => props.colorText + '40'};
-      transition: all ease-in 0.2s;
+      transition: all ease-in 0.1s;
       z-index: 100;
       text-shadow: -5px 5px 0px transparent;
       p {

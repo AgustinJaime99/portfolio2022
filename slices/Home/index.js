@@ -163,6 +163,7 @@ const Container = styled(motion.div)`
     flex-wrap: wrap;
     justify-content: space-between;
     .img {
+      max-width: 800px;
       position: absolute;
       right: 0;
       z-index: 8;

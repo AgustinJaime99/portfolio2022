@@ -27,7 +27,6 @@ const MainMenu = styled.nav`
     li {
       margin: 0 1rem;
       padding: 0.5rem 1rem;
-      cursor: pointer;
     }
   }
   @media (max-width: 768px) {
@@ -41,10 +40,11 @@ const MainMenu = styled.nav`
   }
 `;
 const MenuLink = styled.a`
+  cursor: pointer;
   font-size: 1.8rem;
   text-decoration: none;
   color: var(--mainBg);
-  transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.1s;
   :hover {
     color: var(--mainBg);
     text-shadow: -3.5px 3.5px 0px var(--secondaryColor2);
